@@ -1897,44 +1897,62 @@
     }
 
     .cap-list {
-      display: flex;
-      flex-direction: column;
-      border-top: 1px solid var(--hairline);
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: clamp(22px, 2.4vw, 32px);
     }
 
     .cap-row {
-      display: grid;
-      grid-template-columns: 72px minmax(0, 1fr) clamp(240px, 26vw, 320px);
-      gap: clamp(24px, 3vw, 48px);
-      align-items: start;
-      padding: 40px 8px 40px 0;
-      border-bottom: 1px solid var(--hairline);
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      background-color: var(--linen);
+      border: 1px solid var(--hairline);
+      border-radius: 12px;
+      padding: 30px 28px 28px;
+      box-shadow: var(--shadow-sm);
       position: relative;
-      transition: background-color 0.4s var(--ease);
+      overflow: hidden;
+      transition: transform 0.4s var(--ease), border-color 0.4s var(--ease),
+        box-shadow 0.4s var(--ease), background-color 0.4s var(--ease);
     }
 
-    .cap-row:nth-child(even) {
-      background-color: rgba(var(--prim-saffron-rgb) / 0.045);
+    .cap-row::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 12px;
+      pointer-events: none;
+      background-image:
+        linear-gradient(var(--gold-line), var(--gold-line)),
+        linear-gradient(var(--gold-line), var(--gold-line)),
+        linear-gradient(var(--gold-line), var(--gold-line)),
+        linear-gradient(var(--gold-line), var(--gold-line));
+      background-repeat: no-repeat;
+      background-size: 14px 1.5px, 1.5px 14px, 14px 1.5px, 1.5px 14px;
+      background-position: top left, top left, bottom right, bottom right;
     }
 
     .cap-row:hover {
-      background-color: rgba(var(--prim-saffron-rgb) / 0.09);
+      transform: translateY(-4px);
+      border-color: rgba(201, 169, 110, 0.7);
+      box-shadow: var(--shadow-md);
+      background-color: var(--linen);
     }
 
     .cap-num {
       font-family: var(--font-latin);
-      font-size: 1.5rem;
+      font-size: 1.4rem;
       font-weight: 600;
       color: var(--saffron);
-      opacity: 0.55;
+      opacity: 0.7;
       line-height: 1;
-      padding-top: 5px;
       letter-spacing: 0.02em;
       transition: opacity 0.3s var(--ease);
     }
 
     .cap-row:hover .cap-num {
-      opacity: 0.9;
+      opacity: 1;
     }
 
     .cap-core {
@@ -1945,7 +1963,7 @@
       display: flex;
       align-items: center;
       gap: 14px;
-      margin-bottom: 18px;
+      margin-bottom: 16px;
     }
 
     .cap-ic {
@@ -1964,7 +1982,7 @@
     .cap-en {
       font-family: var(--font-latin);
       font-weight: 700;
-      font-size: clamp(1.25rem, 2vw, 1.5rem);
+      font-size: clamp(1.2rem, 1.8vw, 1.45rem);
       line-height: 1.25;
       color: var(--ink);
       letter-spacing: 0.01em;
@@ -1983,7 +2001,6 @@
       display: flex;
       flex-wrap: wrap;
       gap: 8px 10px;
-      max-width: 540px;
     }
 
     .cap-skills li {
@@ -2000,18 +2017,16 @@
     }
 
     .cap-row:hover .cap-skills li {
-      border-color: rgba(var(--prim-saffron-rgb) / 0.45);
+      border-color: rgba(201, 169, 110, 0.45);
     }
 
     .cap-out {
       display: flex;
       flex-direction: column;
       gap: 6px;
-      justify-self: end;
-      text-align: end;
-      align-self: center;
-      border-inline-start: 1px solid var(--hairline);
-      padding-inline-start: clamp(18px, 2vw, 28px);
+      margin-top: auto;
+      padding-top: 16px;
+      border-top: 1px solid var(--hairline);
       position: relative;
     }
 
@@ -2035,8 +2050,8 @@
 
     .cap-arrow {
       position: absolute;
-      inset-inline-start: clamp(18px, 2vw, 28px);
-      bottom: -8px;
+      inset-inline-start: 0;
+      bottom: -10px;
       font-size: 0.82rem;
       color: var(--saffron);
       opacity: 0;
@@ -2686,14 +2701,12 @@
         grid-template-columns: repeat(3, 1fr);
       }
 
-      .cap-row {
-        grid-template-columns: 60px minmax(0, 1fr) clamp(200px, 30vw, 280px);
-        gap: clamp(18px, 2.4vw, 32px);
-        padding: 32px 4px;
+      .cap-list {
+        grid-template-columns: repeat(2, 1fr);
       }
 
-      .cap-out {
-        padding-inline-start: clamp(16px, 2vw, 24px);
+      .cap-row {
+        padding: 26px 22px;
       }
 
       .about-grid {
@@ -2840,26 +2853,16 @@
         margin-inline: auto;
       }
 
-      .cap-row {
+      .cap-list {
         grid-template-columns: 1fr;
-        gap: 16px;
-        padding: 28px 4px;
-        align-items: stretch;
+      }
+
+      .cap-row {
+        padding: 24px 20px;
       }
 
       .cap-num {
-        font-size: 1.1rem;
-        padding-top: 0;
-      }
-
-      .cap-out {
-        justify-self: stretch;
-        text-align: start;
-        align-self: auto;
-        border-inline-start: none;
-        border-top: 1px dashed var(--hairline);
-        padding-inline-start: 0;
-        padding-top: 14px;
+        font-size: 1.2rem;
       }
 
       .cap-arrow {
