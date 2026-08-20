@@ -604,15 +604,17 @@
       padding: 9px 20px;
       font-size: 0.88rem;
       min-height: 44px;
-      background-color: transparent;
-      color: var(--saffron);
-      border: 1.5px solid var(--saffron);
+      background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-deep) 100%);
+      color: #FFFFFF;
+      border: 1.5px solid transparent;
+      box-shadow: 0 6px 16px rgba(var(--prim-saffron-rgb) / 0.30);
     }
 
     .nav-cta:hover {
-      background-color: var(--saffron);
+      background: linear-gradient(135deg, var(--color-accent-deep) 0%, #7a5942 100%);
       color: #FFFFFF;
-      border-color: var(--saffron);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 22px rgba(var(--prim-saffron-rgb) / 0.42);
     }
 
     .nav-toggle {
