@@ -942,11 +942,11 @@
     .hero-portrait {
       position: relative;
       margin: 0 0 22px;
-      border-radius: var(--r-lg);
-      border: 1px solid var(--hairline);
+      border-radius: 50%;
+      border: 3px solid var(--gold-line);
       overflow: hidden;
       background-color: var(--linen);
-      box-shadow: var(--shadow-hard);
+      box-shadow: 0 0 0 10px var(--saffron-tint), var(--shadow-hard);
     }
 
     .hero-portrait img {
@@ -955,26 +955,11 @@
       aspect-ratio: 4 / 5;
       object-fit: cover;
       display: block;
+      border-radius: 50%;
     }
 
     .hero-portrait::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      border-radius: var(--r-lg);
-      pointer-events: none;
-      background-image:
-        linear-gradient(var(--gold-line), var(--gold-line)),
-        linear-gradient(var(--gold-line), var(--gold-line)),
-        linear-gradient(var(--gold-line), var(--gold-line)),
-        linear-gradient(var(--gold-line), var(--gold-line)),
-        linear-gradient(var(--gold-line), var(--gold-line)),
-        linear-gradient(var(--gold-line), var(--gold-line)),
-        linear-gradient(var(--gold-line), var(--gold-line)),
-        linear-gradient(var(--gold-line), var(--gold-line));
-      background-repeat: no-repeat;
-      background-size: 15px 1px, 1px 15px, 15px 1px, 1px 15px, 15px 1px, 1px 15px, 15px 1px, 1px 15px;
-      background-position: right top, right top, left top, left top, right bottom, right bottom, left bottom, left bottom;
+      content: none;
     }
 
     .brief-card {
