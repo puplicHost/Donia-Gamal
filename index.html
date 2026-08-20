@@ -33,18 +33,18 @@
        ============================================================ */
     :root {
       /* ▪▪ PRIMITIVE LAYER — raw values, never used in components ▪▪ */
-      --prim-ink: #3D2B1F;
-      --prim-ink-rgb: 61 43 31;
+      --prim-ink: #2C1F17;
+      --prim-ink-rgb: 44 31 23;
       --prim-ink-2: #5C4033;
-      --prim-ink-3: #3D2B1F;
+      --prim-ink-3: #2C1F17;
       --prim-paper: #FAF7F2;
       --prim-paper-rgb: 250 247 242;
-      --prim-linen: #F5F0E8;
-      --prim-linen-rgb: 245 240 232;
+      --prim-linen: #F0EBE1;
+      --prim-linen-rgb: 240 235 225;
       --prim-mist: #EDE8DF;
       --prim-bg-alt: #F0EBE1;
       --prim-bg-alt-rgb: 240 235 225;
-      --prim-black: #2A1E14;
+      --prim-black: #2C1F17;
 
       --prim-saffron: #B08968;
       --prim-saffron-rgb: 176 137 104;
@@ -163,8 +163,8 @@
       --space-12: 48px;
       --space-16: 64px;
 
-      --shadow-hard: 0 4px 24px rgba(176 137 104 / 0.12);
-      --shadow-hard-sm: 0 2px 12px rgba(176 137 104 / 0.1);
+      --shadow-hard: 0 8px 40px rgba(176 137 104 / 0.15);
+      --shadow-hard-sm: 0 4px 18px rgba(176 137 104 / 0.12);
       --shadow-lift: 0 24px 60px rgba(176 137 104 / 0.22);
 
       --card-bg: var(--bg-surface);
@@ -183,7 +183,7 @@
 
       --container: 1220px;
       --nav-h: 78px;
-      --ease: cubic-bezier(0.22, 1, 0.36, 1);
+      --ease: cubic-bezier(0.25, 0.46, 0.45, 0.94);
     }
 
     * {
@@ -200,7 +200,7 @@
 
     body {
       background-color: var(--paper);
-      color: var(--ink);
+      color: var(--ink-2);
       font-family: var(--font-body);
       font-size: 1rem;
       line-height: 1.85;
@@ -214,22 +214,27 @@
       inset: 0;
       z-index: -1;
       pointer-events: none;
-      background-image:
-        linear-gradient(45deg, rgba(176, 137, 104, 0.04) 25%, transparent 25%, transparent 75%, rgba(176, 137, 104, 0.04) 75%),
-        linear-gradient(45deg, rgba(176, 137, 104, 0.04) 25%, transparent 25%, transparent 75%, rgba(176, 137, 104, 0.04) 75%);
-      background-size: 34px 34px;
-      background-position: 0 0, 17px 17px;
+      opacity: 0.035;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64'%3E%3Cg fill='none' stroke='%23B08968' stroke-width='1'%3E%3Cpath d='M32 6 L40 16 L32 26 L24 16 Z'/%3E%3Cpath d='M32 38 L37 45 L32 52 L27 45 Z'/%3E%3Cpath d='M6 32 L11 39 L6 46 L1 39 Z'/%3E%3Cpath d='M58 32 L63 39 L58 46 L53 39 Z'/%3E%3Cpath d='M12 10 L18 10 L15 17 Z'/%3E%3Cpath d='M46 46 L52 46 L49 53 Z'/%3E%3C/g%3E%3C/svg%3E");
+      background-size: 64px 64px;
     }
 
     ::selection {
       background-color: var(--saffron);
-      color: var(--ink);
+      color: #FFFFFF;
     }
 
     img {
       max-width: 100%;
       display: block;
       height: auto;
+    }
+
+    .work-cover img,
+    .reel-thumbnail,
+    .cs-gallery-item img,
+    .hero-portrait img {
+      border-radius: 8px;
     }
 
     a {
@@ -268,22 +273,21 @@
     /* ---------- Scrollbar (thin rose gold) ---------- */
     html {
       scrollbar-width: thin;
-      scrollbar-color: var(--saffron) transparent;
+      scrollbar-color: var(--saffron) var(--bg-alt);
     }
 
     ::-webkit-scrollbar {
-      width: 10px;
-      height: 10px;
+      width: 4px;
+      height: 4px;
     }
 
     ::-webkit-scrollbar-track {
-      background-color: var(--paper);
+      background-color: var(--bg-alt);
     }
 
     ::-webkit-scrollbar-thumb {
       background-color: var(--saffron);
       border-radius: 999px;
-      border: 2px solid var(--paper);
     }
 
     ::-webkit-scrollbar-thumb:hover {
@@ -308,13 +312,22 @@
       cursor: pointer;
       white-space: nowrap;
       transition: transform 0.18s var(--ease), box-shadow 0.18s var(--ease),
-        background-color 0.25s var(--ease), color 0.25s var(--ease), border-color 0.25s var(--ease);
+        background-position 0.6s var(--ease), color 0.25s var(--ease), border-color 0.25s var(--ease);
+    }
+
+    .btn:not(.btn-ghost) {
+      background-image: linear-gradient(110deg, var(--saffron) 0%, var(--saffron) 35%, var(--saffron-hot) 50%, var(--saffron) 65%, var(--saffron) 100%);
+      background-size: 220% 100%;
+      background-position: 0% 0;
     }
 
     .btn:hover {
-      background-color: var(--saffron-deep);
       border-color: var(--saffron-deep);
       color: #FFFFFF;
+    }
+
+    .btn:not(.btn-ghost):hover {
+      background-position: 100% 0;
     }
 
     .btn:active {
@@ -369,14 +382,14 @@
     .sec-head::before {
       content: '٠١';
       position: absolute;
-      inset-block-start: -28px;
-      inset-inline-start: -6px;
+      inset-block-start: -34px;
+      inset-inline-start: -10px;
       font-family: 'Cormorant Garamond', serif;
       font-weight: 700;
-      font-size: clamp(5rem, 9vw, 8rem);
+      font-size: clamp(120px, 18vw, 180px);
       line-height: 1;
       color: var(--saffron);
-      opacity: 0.06;
+      opacity: 0.05;
       pointer-events: none;
       z-index: 0;
     }
@@ -403,7 +416,7 @@
 
     .sec-kicker .mono {
       font-size: 0.82rem;
-      letter-spacing: 0.2em;
+      letter-spacing: 0.25em;
       color: var(--saffron);
     }
 
@@ -444,6 +457,36 @@
     section:nth-of-type(6) .sec-head::before { content: '٠٥'; }
     section:nth-of-type(7) .sec-head::before { content: '٠٦'; }
     section:nth-of-type(8) .sec-head::before { content: '٠٧'; }
+
+    .work-section,
+    .reels-section,
+    .services-section,
+    .experience-section,
+    .about-section,
+    .testimonials-section,
+    .contact-section {
+      position: relative;
+    }
+
+    .work-section::before,
+    .reels-section::before,
+    .services-section::before,
+    .experience-section::before,
+    .about-section::before,
+    .testimonials-section::before,
+    .contact-section::before {
+      content: '─ ◆ ─';
+      position: absolute;
+      top: 24px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 0.9rem;
+      letter-spacing: 0.4em;
+      color: var(--gold-line);
+      z-index: 2;
+      pointer-events: none;
+    }
 
     section {
       padding-block: clamp(84px, 10vw, 130px);
@@ -852,9 +895,9 @@
       font-size: 0.72rem;
       font-weight: 600;
       letter-spacing: 0.06em;
-      color: var(--sage);
-      border: 1px solid var(--hairline);
-      background-color: var(--linen);
+      color: var(--saffron-deep);
+      border: 1px solid rgba(176, 137, 104, 0.4);
+      background-color: rgba(176, 137, 104, 0.12);
       padding: 5px 13px;
       border-radius: var(--r-full);
       transition: border-color 0.25s ease, color 0.25s ease;
@@ -919,6 +962,8 @@
     }
 
     .brief-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(201, 169, 110, 0.7);
       box-shadow: var(--shadow-hard), var(--shadow-lift);
     }
 
@@ -1132,7 +1177,6 @@
        WORK — selected campaigns (case studies)
        ============================================================ */
     .work-section {
-      border-top: 1px solid var(--hairline);
       background-color: var(--bg-alt);
     }
 
@@ -1150,13 +1194,13 @@
       cursor: pointer;
       display: flex;
       flex-direction: column;
-      transition: transform 0.4s var(--ease), box-shadow 0.4s var(--ease), border-color 0.4s ease;
+      transition: all 0.4s var(--ease);
     }
 
     .work-card:hover {
-      transform: translateY(-6px);
+      transform: translateY(-4px);
       box-shadow: var(--shadow-hard), var(--shadow-lift);
-      border-color: rgba(176, 137, 104, 0.6);
+      border-color: rgba(201, 169, 110, 0.7);
     }
 
     .testimonial-card,
@@ -1197,6 +1241,21 @@
       transform: scale(1.05);
     }
 
+    .work-cover::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-color: rgba(44, 31, 23, 0.4);
+      opacity: 0;
+      transition: opacity 0.4s var(--ease);
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .work-card:hover .work-cover::after {
+      opacity: 1;
+    }
+
     .work-tape {
       position: absolute;
       top: 16px;
@@ -1211,6 +1270,7 @@
       padding: 5px 12px;
       border-radius: var(--r-sm);
       box-shadow: 2px 2px 0 rgba(176, 137, 104, 0.3);
+      z-index: 2;
     }
 
     .work-body {
@@ -1246,9 +1306,9 @@
       font-weight: 600;
       font-family: var(--font-mono);
       letter-spacing: 0.04em;
-      color: var(--color-ink-soft);
-      background-color: var(--saffron-tint);
-      border: 1px solid var(--color-line-accent-faint);
+      color: var(--saffron-deep);
+      background-color: rgba(176, 137, 104, 0.12);
+      border: 1px solid rgba(176, 137, 104, 0.4);
       padding: 3px 10px;
       border-radius: 4px;
     }
@@ -1622,6 +1682,7 @@
       height: 26px;
       border-radius: 50%;
       border: 1.5px solid var(--hairline-dark);
+      box-shadow: 0 0 0 3px rgba(176, 137, 104, 0.3);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -1806,7 +1867,7 @@
        CAPABILITIES — service ledger rows
        ============================================================ */
     .services-section {
-      border-top: 1px solid var(--hairline);
+      background-color: var(--bg-alt);
     }
 
     .services-list {
@@ -1940,12 +2001,11 @@
        ============================================================ */
     .experience-section {
       background-color: var(--linen);
-      border-top: 1px solid var(--hairline);
     }
 
     .exp-row {
       display: grid;
-      grid-template-columns: 190px 1px 1fr;
+      grid-template-columns: 190px 2px 1fr;
       gap: clamp(24px, 4vw, 56px);
       padding-block: clamp(34px, 5vw, 52px);
     }
@@ -1974,7 +2034,7 @@
     }
 
     .exp-line {
-      background-color: var(--hairline);
+      background-color: var(--gold-line);
       position: relative;
     }
 
@@ -2042,7 +2102,6 @@
        ABOUT — identity panel + bio
        ============================================================ */
     .about-section {
-      border-top: 1px solid var(--hairline);
       background-color: var(--bg-alt);
     }
 
@@ -2175,7 +2234,6 @@
        ============================================================ */
     .testimonials-section {
       background-color: var(--linen);
-      border-top: 1px solid var(--hairline);
     }
 
     .testimonials-grid {
@@ -2201,15 +2259,16 @@
       top: 14px;
       inset-inline-end: 20px;
       font-family: 'Cormorant Garamond', serif;
-      font-size: 3.2rem;
+      font-size: 60px;
       line-height: 1;
       color: var(--saffron);
-      opacity: 0.5;
+      opacity: 0.4;
     }
 
     .testimonial-card:hover {
-      transform: translateY(-5px);
-      box-shadow: var(--shadow-hard-sm);
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-hard);
+      border-color: rgba(201, 169, 110, 0.7);
     }
 
     .testimonial-stars {
@@ -2414,7 +2473,7 @@
       padding: 12px 14px;
       background-color: #FFFFFF;
       border: 1px solid var(--gold-line);
-      border-radius: 8px;
+      border-radius: 4px;
       color: var(--ink);
       font-family: var(--font-body);
       font-size: 1rem;
@@ -2433,7 +2492,7 @@
     .form-textarea:focus {
       outline: none;
       border-color: var(--saffron);
-      box-shadow: 0 0 0 3px rgba(176, 137, 104, 0.15);
+      box-shadow: 0 0 0 3px rgba(176, 137, 104, 0.3);
     }
 
     .form-textarea {
