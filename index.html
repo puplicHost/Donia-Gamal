@@ -739,16 +739,14 @@
     .hero-tagline,
     .hero-desc,
     .hero-ctas,
-    .ledger-stats,
-    .hero-tags {
+    .hero-social {
       animation: rise-in 0.7s var(--ease) both;
     }
 
     .hero-tagline { animation-delay: 0.08s; }
     .hero-desc { animation-delay: 0.16s; }
     .hero-ctas { animation-delay: 0.24s; }
-    .ledger-stats { animation-delay: 0.32s; }
-    .hero-tags { animation-delay: 0.4s; }
+    .hero-social { animation-delay: 0.32s; }
 
     @keyframes pulse-dot {
       0%, 100% { box-shadow: 0 0 0 3px var(--saffron-tint); }
@@ -833,7 +831,35 @@
       gap: 14px;
       align-items: center;
       flex-wrap: wrap;
-      margin-bottom: 40px;
+      margin-bottom: 26px;
+    }
+
+    .hero-social {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .hero-social a {
+      width: 42px;
+      height: 42px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      border: 1px solid var(--gold-line);
+      background-color: var(--linen);
+      color: var(--saffron);
+      font-size: 1.05rem;
+      transition: background-color 0.35s var(--ease), color 0.35s var(--ease),
+        border-color 0.35s var(--ease), transform 0.35s var(--ease);
+    }
+
+    .hero-social a:hover {
+      background-color: var(--saffron);
+      border-color: var(--saffron);
+      color: #FFFFFF;
+      transform: translateY(-3px);
     }
 
     /* Ledger stats strip */
@@ -2941,18 +2967,12 @@
             <a href="#contact" class="btn btn-ghost"><i class="fa-solid fa-download"></i> تحميل السيرة الذاتية (CV)</a>
           </div>
 
-          <ul class="ledger-stats">
-            <li><b>12<i>+</i></b><span>حملة موسمية مُسلَّمة</span></li>
-            <li><b>4<i>+</i></b><span>سنوات إدارة حسابات</span></li>
-            <li><b>2</b><span>وكالات تسويق</span></li>
-          </ul>
-
-          <div class="hero-tags">
-            <span class="tag">Client Communication</span>
-            <span class="tag">Brief Development</span>
-            <span class="tag">Campaign Operations</span>
-            <span class="tag">Team Leadership</span>
-            <span class="tag">Quality Control</span>
+          <div class="hero-social">
+            <a href="https://www.linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.behance.net/" target="_blank" rel="noopener" aria-label="Behance"><i class="fa-brands fa-behance"></i></a>
+            <a href="https://x.com/" target="_blank" rel="noopener" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://wa.me/201104760993" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
           </div>
         </div>
 
