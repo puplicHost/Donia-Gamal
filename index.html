@@ -1883,130 +1883,165 @@
       background-color: var(--bg-alt);
     }
 
-    .services-list {
+    .cap-list {
       display: flex;
       flex-direction: column;
-    }
-
-    .service-row {
-      display: grid;
-      grid-template-columns: 1.1fr 1.5fr 0.9fr;
-      gap: clamp(20px, 3vw, 44px);
-      align-items: center;
-      padding: 30px 8px 30px 26px;
       border-top: 1px solid var(--hairline);
-      position: relative;
-      transition: background-color 0.35s ease;
     }
 
-    .service-row:last-child {
+    .cap-row {
+      display: grid;
+      grid-template-columns: 72px minmax(0, 1fr) clamp(240px, 26vw, 320px);
+      gap: clamp(24px, 3vw, 48px);
+      align-items: start;
+      padding: 40px 8px 40px 0;
       border-bottom: 1px solid var(--hairline);
+      position: relative;
+      transition: background-color 0.4s var(--ease);
     }
 
-    .service-row::before {
-      content: '';
-      position: absolute;
-      inset-block: 0;
-      inset-inline-start: 0;
-      width: 3px;
-      background-color: var(--saffron);
-      transform: scaleY(0);
-      transform-origin: top;
-      transition: transform 0.4s var(--ease);
+    .cap-row:nth-child(even) {
+      background-color: rgba(var(--prim-saffron-rgb) / 0.045);
     }
 
-    .service-row:hover {
-      background-color: var(--mist);
+    .cap-row:hover {
+      background-color: rgba(var(--prim-saffron-rgb) / 0.09);
     }
 
-    .service-row:hover::before {
-      transform: scaleY(1);
+    .cap-num {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--saffron);
+      opacity: 0.55;
+      line-height: 1;
+      padding-top: 5px;
+      letter-spacing: 0.02em;
+      transition: opacity 0.3s var(--ease);
     }
 
-    .svc-head {
+    .cap-row:hover .cap-num {
+      opacity: 0.9;
+    }
+
+    .cap-core {
+      min-width: 0;
+    }
+
+    .cap-cat {
       display: flex;
       align-items: center;
-      gap: 18px;
+      gap: 14px;
+      margin-bottom: 18px;
     }
 
-    .svc-icon {
-      width: 52px;
-      height: 52px;
-      flex: 0 0 52px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.2rem;
-      color: #FFFFFF;
-      background-color: var(--saffron);
-      border-radius: var(--r-md);
-      box-shadow: 3px 3px 0 rgba(176, 137, 104, 0.3);
-      transition: transform 0.3s var(--ease);
+    .cap-ic {
+      flex: 0 0 22px;
+      width: 22px;
+      text-align: center;
+      font-size: 1rem;
+      color: var(--saffron);
+      transition: color 0.3s var(--ease);
     }
 
-    .service-row:hover .svc-icon {
-      transform: translateY(-3px);
+    .cap-cat-text {
+      min-width: 0;
     }
 
-    .svc-title {
+    .cap-en {
       font-family: var(--font-display);
       font-weight: 700;
-      font-size: 1.35rem;
-      line-height: 1.35;
+      font-size: clamp(1.25rem, 2vw, 1.5rem);
+      line-height: 1.25;
       color: var(--ink);
+      letter-spacing: 0.01em;
+      transition: color 0.3s var(--ease);
     }
 
-    .svc-ar {
+    .cap-ar {
       display: block;
-      font-size: 0.82rem;
+      font-size: 0.92rem;
       font-weight: 600;
       color: var(--sage);
-      margin-top: 2px;
+      margin-top: 3px;
     }
 
-    .svc-chips {
+    .cap-skills {
       display: flex;
       flex-wrap: wrap;
-      gap: 8px;
+      gap: 8px 10px;
+      max-width: 540px;
     }
 
-    .svc-chips li {
+    .cap-skills li {
       font-family: var(--font-mono);
       font-size: 0.7rem;
       font-weight: 600;
-      letter-spacing: 0.03em;
+      letter-spacing: 0.02em;
       color: var(--ink-2);
       border: 1px solid var(--hairline);
       background-color: var(--linen);
-      padding: 5px 12px;
-      border-radius: 4px;
-      transition: border-color 0.25s ease;
+      padding: 4px 11px;
+      border-radius: 3px;
+      transition: border-color 0.3s var(--ease), color 0.3s var(--ease);
     }
 
-    .svc-chips li:hover {
-      border-color: var(--saffron-deep);
+    .cap-row:hover .cap-skills li {
+      border-color: rgba(var(--prim-saffron-rgb) / 0.45);
     }
 
-    .svc-out {
+    .cap-out {
       display: flex;
       flex-direction: column;
-      gap: 3px;
+      gap: 6px;
       justify-self: end;
       text-align: end;
+      align-self: center;
       border-inline-start: 1px solid var(--hairline);
-      padding-inline-start: 22px;
+      padding-inline-start: clamp(18px, 2vw, 28px);
+      position: relative;
     }
 
-    .svc-out .mono {
+    .cap-out-label {
+      font-family: var(--font-mono);
       font-size: 0.6rem;
-      color: var(--color-ink-soft);
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--saffron-deep);
     }
 
-    .svc-out b {
-      font-size: 0.95rem;
-      font-weight: 700;
-      color: var(--ink);
+    .cap-out-title {
       font-family: var(--font-body);
+      font-size: 1.05rem;
+      font-weight: 700;
+      line-height: 1.3;
+      color: var(--ink);
+      transition: color 0.3s var(--ease);
+    }
+
+    .cap-arrow {
+      position: absolute;
+      inset-inline-start: clamp(18px, 2vw, 28px);
+      bottom: -8px;
+      font-size: 0.82rem;
+      color: var(--saffron);
+      opacity: 0;
+      transform: translateX(-5px);
+      transition: opacity 0.3s var(--ease), transform 0.3s var(--ease);
+    }
+
+    .cap-row:hover .cap-en {
+      color: var(--saffron-deep);
+    }
+
+    .cap-row:hover .cap-out-title {
+      color: var(--saffron-deep);
+    }
+
+    .cap-row:hover .cap-arrow {
+      opacity: 1;
+      transform: translateX(0);
     }
 
     /* ============================================================
@@ -2638,18 +2673,14 @@
         grid-template-columns: repeat(3, 1fr);
       }
 
-      .service-row {
-        grid-template-columns: 1.1fr 1.4fr;
+      .cap-row {
+        grid-template-columns: 60px minmax(0, 1fr) clamp(200px, 30vw, 280px);
+        gap: clamp(18px, 2.4vw, 32px);
+        padding: 32px 4px;
       }
 
-      .svc-out {
-        grid-column: 2;
-        justify-self: start;
-        text-align: start;
-        border-inline-start: none;
-        padding-inline-start: 0;
-        border-top: 1px dashed var(--hairline);
-        padding-top: 12px;
+      .cap-out {
+        padding-inline-start: clamp(16px, 2vw, 24px);
       }
 
       .about-grid {
@@ -2796,14 +2827,34 @@
         margin-inline: auto;
       }
 
-      .service-row {
+      .cap-row {
         grid-template-columns: 1fr;
         gap: 16px;
-        padding: 26px 6px;
+        padding: 28px 4px;
+        align-items: stretch;
       }
 
-      .svc-out {
-        grid-column: auto;
+      .cap-num {
+        font-size: 1.1rem;
+        padding-top: 0;
+      }
+
+      .cap-out {
+        justify-self: stretch;
+        text-align: start;
+        align-self: auto;
+        border-inline-start: none;
+        border-top: 1px dashed var(--hairline);
+        padding-inline-start: 0;
+        padding-top: 14px;
+      }
+
+      .cap-arrow {
+        display: none;
+      }
+
+      .cap-skills {
+        max-width: none;
       }
 
       .cs-meta {
@@ -2865,11 +2916,8 @@
         padding: 4px 9px;
       }
 
-      .svc-icon {
-        width: 44px;
-        height: 44px;
-        flex-basis: 44px;
-        font-size: 1rem;
+      .cap-ic {
+        font-size: 0.95rem;
       }
 
       .doc-status {
@@ -3145,131 +3193,155 @@
     <div class="container">
       <header class="sec-head reveal">
         <div class="sec-kicker">
-          <span class="mono">Core Competencies · الخدمات والمهارات</span>
+          <span class="mono">Professional Capabilities · القدرات المهنية</span>
           <span class="rule"></span>
         </div>
-        <h2 class="sec-title">القدرات والمهارات الأساسية</h2>
-        <p class="sec-sub">كل خدمة لها مخرجات واضحة (Deliverables) قابل للقياس — هذا هو أسلوب العمل الذي ألتزم به مع كل حساب.</p>
+        <h2 class="sec-title">القدرات التي تتحول إلى نتائج</h2>
+        <p class="sec-sub">خبرات عملية تتحول إلى أنظمة واضحة، مخرجات قابلة للتنفيذ، ونتائج يمكن قياسها.</p>
       </header>
 
-      <div class="services-list">
-        <div class="service-row reveal" style="--rd: 0.02s">
-          <div class="svc-head">
-            <i class="fa-solid fa-users-gear svc-icon"></i>
-            <div>
-              <h3 class="svc-title">Account Management</h3>
-              <span class="svc-ar">إدارة الحسابات والعلاقات</span>
+      <div class="cap-list">
+        <div class="cap-row reveal" style="--rd: 0.02s">
+          <span class="cap-num">01</span>
+          <div class="cap-core">
+            <div class="cap-cat">
+              <i class="fa-solid fa-users-gear cap-ic" aria-hidden="true"></i>
+              <div class="cap-cat-text">
+                <h3 class="cap-en">Account Management</h3>
+                <span class="cap-ar">إدارة الحسابات والعلاقات</span>
+              </div>
             </div>
+            <ul class="cap-skills">
+              <li>Client Relations &amp; Communication</li>
+              <li>Account Retention &amp; Expansion</li>
+              <li>Stakeholder Alignment</li>
+              <li>Client Feedback Management</li>
+            </ul>
           </div>
-          <ul class="svc-chips">
-            <li>Client Relations &amp; Communication</li>
-            <li>Account Retention &amp; Expansion</li>
-            <li>Stakeholder Alignment</li>
-            <li>Client Feedback Management</li>
-          </ul>
-          <div class="svc-out">
-            <span class="mono">Deliverable</span>
-            <b>Account Growth Plan</b>
+          <div class="cap-out">
+            <span class="cap-out-label">Deliverable</span>
+            <b class="cap-out-title">Account Growth Plan</b>
+            <i class="fa-solid fa-arrow-left-long cap-arrow" aria-hidden="true"></i>
           </div>
         </div>
 
-        <div class="service-row reveal" style="--rd: 0.04s">
-          <div class="svc-head">
-            <i class="fa-solid fa-bullhorn svc-icon"></i>
-            <div>
-              <h3 class="svc-title">Marketing &amp; Campaigns</h3>
-              <span class="svc-ar">التسويق والحملات</span>
+        <div class="cap-row reveal" style="--rd: 0.04s">
+          <span class="cap-num">02</span>
+          <div class="cap-core">
+            <div class="cap-cat">
+              <i class="fa-solid fa-bullhorn cap-ic" aria-hidden="true"></i>
+              <div class="cap-cat-text">
+                <h3 class="cap-en">Marketing &amp; Campaigns</h3>
+                <span class="cap-ar">التسويق والحملات</span>
+              </div>
             </div>
+            <ul class="cap-skills">
+              <li>Campaign Strategy &amp; Planning</li>
+              <li>Brief Development &amp; Execution</li>
+              <li>Integrated Marketing Coordination</li>
+              <li>Social Media Campaign Management</li>
+            </ul>
           </div>
-          <ul class="svc-chips">
-            <li>Campaign Strategy &amp; Planning</li>
-            <li>Brief Development &amp; Execution</li>
-            <li>Integrated Marketing Coordination</li>
-            <li>Social Media Campaign Management</li>
-          </ul>
-          <div class="svc-out">
-            <span class="mono">Deliverable</span>
-            <b>Campaign Kit &amp; Calendar</b>
+          <div class="cap-out">
+            <span class="cap-out-label">Deliverable</span>
+            <b class="cap-out-title">Campaign Kit &amp; Calendar</b>
+            <i class="fa-solid fa-arrow-left-long cap-arrow" aria-hidden="true"></i>
           </div>
         </div>
 
-        <div class="service-row reveal" style="--rd: 0.06s">
-          <div class="svc-head">
-            <i class="fa-solid fa-user-shield svc-icon"></i>
-            <div>
-              <h3 class="svc-title">Team Leadership</h3>
-              <span class="svc-ar">قيادة الفرق</span>
+        <div class="cap-row reveal" style="--rd: 0.06s">
+          <span class="cap-num">03</span>
+          <div class="cap-core">
+            <div class="cap-cat">
+              <i class="fa-solid fa-user-shield cap-ic" aria-hidden="true"></i>
+              <div class="cap-cat-text">
+                <h3 class="cap-en">Team Leadership</h3>
+                <span class="cap-ar">قيادة الفرق</span>
+              </div>
             </div>
+            <ul class="cap-skills">
+              <li>Creative Team Coordination</li>
+              <li>Workload &amp; Task Delegation</li>
+              <li>Cross-Departmental Management</li>
+              <li>Priority &amp; Sprint Management</li>
+            </ul>
           </div>
-          <ul class="svc-chips">
-            <li>Creative Team Coordination</li>
-            <li>Workload &amp; Task Delegation</li>
-            <li>Cross-Departmental Management</li>
-            <li>Priority &amp; Sprint Management</li>
-          </ul>
-          <div class="svc-out">
-            <span class="mono">Deliverable</span>
-            <b>Team Production Plan</b>
+          <div class="cap-out">
+            <span class="cap-out-label">Deliverable</span>
+            <b class="cap-out-title">Team Production Plan</b>
+            <i class="fa-solid fa-arrow-left-long cap-arrow" aria-hidden="true"></i>
           </div>
         </div>
 
-        <div class="service-row reveal" style="--rd: 0.08s">
-          <div class="svc-head">
-            <i class="fa-solid fa-list-check svc-icon"></i>
-            <div>
-              <h3 class="svc-title">Project Management</h3>
-              <span class="svc-ar">إدارة المشاريع</span>
+        <div class="cap-row reveal" style="--rd: 0.08s">
+          <span class="cap-num">04</span>
+          <div class="cap-core">
+            <div class="cap-cat">
+              <i class="fa-solid fa-list-check cap-ic" aria-hidden="true"></i>
+              <div class="cap-cat-text">
+                <h3 class="cap-en">Project Management</h3>
+                <span class="cap-ar">إدارة المشاريع</span>
+              </div>
             </div>
+            <ul class="cap-skills">
+              <li>Timeline &amp; Deliverables Control</li>
+              <li>Quality Control &amp; Review (QC)</li>
+              <li>Process &amp; Workflow Optimization</li>
+              <li>Resource Allocation</li>
+            </ul>
           </div>
-          <ul class="svc-chips">
-            <li>Timeline &amp; Deliverables Control</li>
-            <li>Quality Control &amp; Review (QC)</li>
-            <li>Process &amp; Workflow Optimization</li>
-            <li>Resource Allocation</li>
-          </ul>
-          <div class="svc-out">
-            <span class="mono">Deliverable</span>
-            <b>QC Checklist &amp; Schedules</b>
+          <div class="cap-out">
+            <span class="cap-out-label">Deliverable</span>
+            <b class="cap-out-title">QC Checklist &amp; Schedules</b>
+            <i class="fa-solid fa-arrow-left-long cap-arrow" aria-hidden="true"></i>
           </div>
         </div>
 
-        <div class="service-row reveal" style="--rd: 0.1s">
-          <div class="svc-head">
-            <i class="fa-solid fa-pen-ruler svc-icon"></i>
-            <div>
-              <h3 class="svc-title">Creative (Supporting)</h3>
-              <span class="svc-ar">إبداع داعم</span>
+        <div class="cap-row reveal" style="--rd: 0.1s">
+          <span class="cap-num">05</span>
+          <div class="cap-core">
+            <div class="cap-cat">
+              <i class="fa-solid fa-pen-ruler cap-ic" aria-hidden="true"></i>
+              <div class="cap-cat-text">
+                <h3 class="cap-en">Creative (Supporting)</h3>
+                <span class="cap-ar">إبداع داعم</span>
+              </div>
             </div>
+            <ul class="cap-skills">
+              <li>Script Writing &amp; Visual Hooks</li>
+              <li>Copywriting &amp; Angles Review</li>
+              <li>Art Direction &amp; Brand Guidelines</li>
+              <li>Social Visual Review</li>
+            </ul>
           </div>
-          <ul class="svc-chips">
-            <li>Script Writing &amp; Visual Hooks</li>
-            <li>Copywriting &amp; Angles Review</li>
-            <li>Art Direction &amp; Brand Guidelines</li>
-            <li>Social Visual Review</li>
-          </ul>
-          <div class="svc-out">
-            <span class="mono">Deliverable</span>
-            <b>Creative Scripts &amp; Concepts</b>
+          <div class="cap-out">
+            <span class="cap-out-label">Deliverable</span>
+            <b class="cap-out-title">Creative Scripts &amp; Concepts</b>
+            <i class="fa-solid fa-arrow-left-long cap-arrow" aria-hidden="true"></i>
           </div>
         </div>
 
-        <div class="service-row reveal" style="--rd: 0.12s">
-          <div class="svc-head">
-            <i class="fa-solid fa-handshake svc-icon"></i>
-            <div>
-              <h3 class="svc-title">Business Acumen</h3>
-              <span class="svc-ar">الفطنة التجارية</span>
+        <div class="cap-row reveal" style="--rd: 0.12s">
+          <span class="cap-num">06</span>
+          <div class="cap-core">
+            <div class="cap-cat">
+              <i class="fa-solid fa-handshake cap-ic" aria-hidden="true"></i>
+              <div class="cap-cat-text">
+                <h3 class="cap-en">Business Acumen</h3>
+                <span class="cap-ar">الفطنة التجارية</span>
+              </div>
             </div>
+            <ul class="cap-skills">
+              <li>Saudi &amp; GCC Market Familiarity</li>
+              <li>Professional Communication</li>
+              <li>Problem Solving &amp; Crisis Control</li>
+              <li>Performance Oversight</li>
+            </ul>
           </div>
-          <ul class="svc-chips">
-            <li>Saudi &amp; GCC Market Familiarity</li>
-            <li>Professional Communication</li>
-            <li>Problem Solving &amp; Crisis Control</li>
-            <li>Performance Oversight</li>
-          </ul>
-          <div class="svc-out">
-            <span class="mono">Deliverable</span>
-            <b>Monthly Performance Reports</b>
+          <div class="cap-out">
+            <span class="cap-out-label">Deliverable</span>
+            <b class="cap-out-title">Monthly Performance Reports</b>
+            <i class="fa-solid fa-arrow-left-long cap-arrow" aria-hidden="true"></i>
           </div>
         </div>
       </div>
