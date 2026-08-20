@@ -1,0 +1,3867 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Donia Gamal — Account Manager, Team Leader & Marketing Manager Portfolio. Specialized in Client Relations, Campaign Management, Briefing & Strategic Marketing Leadership." />
+  <meta property="og:title" content="Donia Gamal | Account Manager & Marketing Manager Portfolio" />
+  <meta property="og:description" content="Portfolio of Donia Gamal — Account Manager & Team Leader with 4+ years of experience managing marketing campaigns and agency operations." />
+  <meta property="og:type" content="website" />
+  <title>دنيا جمال | Donia Gamal — Account Manager & Marketing Professional</title>
+
+  <!-- Google Fonts: El Messiri (Arabic display) · IBM Plex Sans Arabic (body) · Archivo (Latin display) · JetBrains Mono (ledger utility) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Lato:wght@300;400;700&display=swap"
+    rel="stylesheet" />
+
+  <!-- Font Awesome 6.5.0 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <style>
+    /* ============================================================
+       THE CAMPAIGN LEDGER — design system tokens
+       A production-desk aesthetic: ledger paper, spruce ink,
+       saffron stamping ink, mono records, hairline rules.
+       ============================================================ */
+    /* ------------------------------------------------------------
+       DESIGN TOKENS — three-layer architecture
+       Primitive (raw values) → Semantic (purpose aliases) → Component
+       ============================================================ */
+    :root {
+      /* ▪▪ PRIMITIVE LAYER — raw values, never used in components ▪▪ */
+      --prim-ink: #3D2B1F;
+      --prim-ink-rgb: 61 43 31;
+      --prim-ink-2: #5C4033;
+      --prim-ink-3: #3D2B1F;
+      --prim-paper: #FAF7F2;
+      --prim-paper-rgb: 250 247 242;
+      --prim-linen: #F5F0E8;
+      --prim-linen-rgb: 245 240 232;
+      --prim-mist: #EDE8DF;
+      --prim-bg-alt: #F0EBE1;
+      --prim-bg-alt-rgb: 240 235 225;
+      --prim-black: #2A1E14;
+
+      --prim-saffron: #B08968;
+      --prim-saffron-rgb: 176 137 104;
+      --prim-saffron-deep: #8B6347;
+      --prim-saffron-deep-rgb: 139 99 71;
+      --prim-saffron-hot: #D4A574;
+      --prim-gold: #C9A96E;
+      --prim-gold-rgb: 201 169 110;
+      --prim-sage: #9C7B6B;
+      --prim-sage-light: #8F6F5E;
+      --prim-pale: #5C4033;
+
+      --prim-r-sm: 8px;
+      --prim-r-md: 12px;
+      --prim-r-lg: 16px;
+      --prim-r-full: 999px;
+
+      --prim-shadow: 176 137 104;
+
+      --prim-font-display: 'Cairo', sans-serif;
+      --prim-font-body: 'Cairo', sans-serif;
+      --prim-font-latin: 'Cormorant Garamond', serif;
+      --prim-font-mono: 'Cormorant Garamond', serif;
+      /* ▪▪ SEMANTIC LAYER — purpose aliases ▪▪ */
+      --bg: var(--prim-paper);
+      --bg-surface: var(--prim-linen);
+      --bg-mist: var(--prim-mist);
+      --bg-dark: var(--prim-ink);
+      --bg-dark-2: var(--prim-ink-2);
+      --bg-dark-3: var(--prim-ink-3);
+
+      --color-ink: var(--prim-ink);
+      --color-ink-soft: var(--prim-ink-2);
+      --color-ink-deep: var(--prim-ink-3);
+      --color-text: var(--prim-ink);
+      --color-text-inverse: var(--prim-linen);
+      --color-text-muted: var(--prim-ink-2);
+      --color-text-faint: #8F6F5E;
+      --color-text-pale: var(--prim-pale);
+
+      --color-accent: var(--prim-saffron);
+      --color-accent-deep: var(--prim-saffron-deep);
+      --color-accent-hot: var(--prim-saffron-hot);
+      --color-accent-tint: rgba(var(--prim-saffron-rgb) / 0.14);
+      --color-accent-tint-strong: rgba(var(--prim-saffron-rgb) / 0.2);
+
+      --color-line: rgba(var(--prim-saffron-rgb) / 0.25);
+      --color-line-soft: rgba(var(--prim-saffron-rgb) / 0.14);
+      --color-line-dark: rgba(var(--prim-saffron-rgb) / 0.3);
+      --color-line-dark-solid: rgba(var(--prim-saffron-rgb) / 0.5);
+      --color-line-dark-soft: rgba(var(--prim-saffron-rgb) / 0.65);
+
+      --color-overlay-dark: rgba(var(--prim-ink-rgb) / 0.82);
+      --color-overlay-ink: rgba(var(--prim-ink-rgb) / 0.94);
+      --color-overlay-ink-soft: rgba(42 30 20 / 0.94);
+      --color-shade-deep: rgba(42 30 20 / 0.96);
+      --color-shade-mid: rgba(61 43 31 / 0.55);
+
+      --color-shadow-soft: rgba(var(--prim-shadow) / 0.22);
+      --color-shadow-x: rgba(var(--prim-shadow) / 0.5);
+
+      --color-nav-translucent: rgba(var(--prim-paper-rgb) / 0.9);
+      --color-nav-solid: rgba(var(--prim-linen-rgb) / 0.96);
+      --color-grid-dot: rgba(var(--prim-gold-rgb) / 0.08);
+      --color-pulse-faint: rgba(var(--prim-saffron-rgb) / 0.06);
+      --color-accent-recessed: rgba(var(--prim-saffron-rgb) / 0.92);
+      --color-accent-ghost: rgba(var(--prim-saffron-rgb) / 0.1);
+
+      --color-line-accent-soft: rgba(var(--prim-saffron-deep-rgb) / 0.35);
+      --color-line-accent-faint: rgba(var(--prim-saffron-deep-rgb) / 0.3);
+      --color-line-accent: rgba(var(--prim-saffron-deep-rgb) / 0.4);
+
+      --color-shadow-black: rgba(61 43 31 / 0.45);
+      --color-shadow-black-soft: rgba(61 43 31 / 0.35);
+      --color-shadow-black-deep: rgba(42 30 20 / 0.8);
+
+      --bg-alt: var(--prim-bg-alt);
+      --gold-line: var(--prim-gold);
+
+      /* ▪▪ SHORTHAND ALIASES — used throughout component rules ▪▪ */
+      --paper: var(--bg);
+      --linen: var(--bg-surface);
+      --mist: var(--bg-mist);
+      --ink: var(--color-ink);
+      --ink-2: var(--color-ink-soft);
+      --ink-3: var(--color-ink-deep);
+      --sage: var(--color-text-muted);
+      --sage-light: var(--color-text-faint);
+      --pale: var(--color-text-pale);
+      --saffron: var(--color-accent);
+      --saffron-deep: var(--color-accent-deep);
+      --saffron-hot: var(--color-accent-hot);
+      --saffron-tint: var(--color-accent-tint);
+      --hairline: rgba(var(--prim-saffron-rgb) / 0.25);
+      --hairline-soft: rgba(var(--prim-saffron-rgb) / 0.14);
+      --hairline-dark: rgba(var(--prim-saffron-rgb) / 0.3);
+      --hairline-dark-soft: rgba(var(--prim-saffron-rgb) / 0.5);
+      --hairline-dark-solid: rgba(var(--prim-saffron-rgb) / 0.45);
+
+      /* ▪▪ COMPONENT LAYER — component-scoped decisions ▪▪ */
+      --r-sm: var(--prim-r-sm);
+      --r-md: var(--prim-r-md);
+      --r-lg: var(--prim-r-lg);
+      --r-full: var(--prim-r-full);
+
+      /* spacing scale (4px base unit) */
+      --space-1: 4px;
+      --space-2: 8px;
+      --space-3: 12px;
+      --space-4: 16px;
+      --space-5: 20px;
+      --space-6: 24px;
+      --space-7: 28px;
+      --space-8: 32px;
+      --space-10: 40px;
+      --space-12: 48px;
+      --space-16: 64px;
+
+      --shadow-hard: 0 4px 24px rgba(176 137 104 / 0.12);
+      --shadow-hard-sm: 0 2px 12px rgba(176 137 104 / 0.1);
+      --shadow-lift: 0 24px 60px rgba(176 137 104 / 0.22);
+
+      --card-bg: var(--bg-surface);
+      --card-line: var(--color-line);
+
+      --btn-bg: var(--color-ink);
+      --btn-bg-hover: var(--color-ink-soft);
+      --btn-color: var(--color-text-inverse);
+      --btn-line: var(--color-ink);
+      --btn-shadow: var(--shadow-hard-sm);
+
+      --font-display: var(--prim-font-display);
+      --font-body: var(--prim-font-body);
+      --font-latin: var(--prim-font-latin);
+      --font-mono: var(--prim-font-mono);
+
+      --container: 1220px;
+      --nav-h: 78px;
+      --ease: cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: calc(var(--nav-h) + 18px);
+      overflow-x: hidden;
+    }
+
+    body {
+      background-color: var(--paper);
+      color: var(--ink);
+      font-family: var(--font-body);
+      font-size: 1rem;
+      line-height: 1.85;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
+      background-image:
+        linear-gradient(45deg, rgba(176, 137, 104, 0.04) 25%, transparent 25%, transparent 75%, rgba(176, 137, 104, 0.04) 75%),
+        linear-gradient(45deg, rgba(176, 137, 104, 0.04) 25%, transparent 25%, transparent 75%, rgba(176, 137, 104, 0.04) 75%);
+      background-size: 34px 34px;
+      background-position: 0 0, 17px 17px;
+    }
+
+    ::selection {
+      background-color: var(--saffron);
+      color: var(--ink);
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+      height: auto;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    .container {
+      width: min(var(--container), 92%);
+      margin-inline: auto;
+    }
+
+    :focus-visible {
+      outline: 2px solid var(--saffron);
+      outline-offset: 3px;
+      border-radius: 2px;
+    }
+
+    .mono {
+      font-family: 'Cormorant Garamond', 'Cairo', serif;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .mono-ar {
+      font-family: 'Cormorant Garamond', 'Cairo', serif;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+    }
+
+    /* ---------- Scrollbar (thin rose gold) ---------- */
+    html {
+      scrollbar-width: thin;
+      scrollbar-color: var(--saffron) transparent;
+    }
+
+    ::-webkit-scrollbar {
+      width: 10px;
+      height: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background-color: var(--paper);
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background-color: var(--saffron);
+      border-radius: 999px;
+      border: 2px solid var(--paper);
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background-color: var(--saffron-deep);
+    }
+
+    /* ---------- Buttons ---------- */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 50px;
+      padding: 13px 28px;
+      font-family: var(--font-body);
+      font-weight: 700;
+      font-size: 0.98rem;
+      border-radius: 4px;
+      border: 1.5px solid var(--saffron);
+      background-color: var(--saffron);
+      color: #FFFFFF;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: transform 0.18s var(--ease), box-shadow 0.18s var(--ease),
+        background-color 0.25s var(--ease), color 0.25s var(--ease), border-color 0.25s var(--ease);
+    }
+
+    .btn:hover {
+      background-color: var(--saffron-deep);
+      border-color: var(--saffron-deep);
+      color: #FFFFFF;
+    }
+
+    .btn:active {
+      transform: translate(2px, 2px);
+      box-shadow: none;
+    }
+
+    .btn-dark {
+      background-color: var(--saffron);
+      color: #FFFFFF;
+    }
+
+    .btn-dark:hover {
+      background-color: var(--saffron-deep);
+      border-color: var(--saffron-deep);
+      transform: translate(2px, 2px);
+      box-shadow: 1px 1px 0 var(--color-accent-deep);
+    }
+
+    .btn-saffron {
+      background-color: var(--saffron);
+      color: #FFFFFF;
+      border-color: var(--saffron-deep);
+      box-shadow: var(--shadow-hard-sm);
+    }
+
+    .btn-saffron:hover {
+      background-color: var(--saffron-deep);
+      border-color: var(--saffron-deep);
+      transform: translate(2px, 2px);
+      box-shadow: 1px 1px 0 var(--color-accent-deep);
+    }
+
+    .btn-ghost {
+      background-color: transparent;
+      color: var(--saffron);
+      border-color: var(--saffron);
+    }
+
+    .btn-ghost:hover {
+      background-color: var(--saffron);
+      color: #FFFFFF;
+      transform: translate(2px, 2px);
+    }
+
+    /* ---------- Section head (ledger tab pattern) ---------- */
+    .sec-head {
+      position: relative;
+      margin-bottom: 64px;
+    }
+
+    .sec-head::before {
+      content: '٠١';
+      position: absolute;
+      inset-block-start: -28px;
+      inset-inline-start: -6px;
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 700;
+      font-size: clamp(5rem, 9vw, 8rem);
+      line-height: 1;
+      color: var(--saffron);
+      opacity: 0.06;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .sec-head > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .sec-kicker {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+
+    .sec-kicker::before {
+      content: '';
+      width: 40px;
+      height: 1px;
+      background-color: var(--gold-line);
+      flex: 0 0 40px;
+    }
+
+    .sec-kicker .mono {
+      font-size: 0.82rem;
+      letter-spacing: 0.2em;
+      color: var(--saffron);
+    }
+
+    .sec-kicker .mono::after {
+      content: ' ◆ ';
+      color: var(--saffron);
+      font-size: 0.6em;
+      letter-spacing: 0;
+    }
+
+    .sec-kicker .rule {
+      flex: 1;
+      height: 1px;
+      background-color: var(--gold-line);
+      opacity: 0.5;
+      max-width: 220px;
+    }
+
+    .sec-title {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: clamp(1.9rem, 3.6vw, 2.9rem);
+      line-height: 1.35;
+      color: var(--ink);
+      margin-bottom: 14px;
+    }
+
+    .sec-sub {
+      font-size: 1.05rem;
+      color: var(--sage);
+      max-width: 640px;
+      line-height: 1.9;
+    }
+
+    section:nth-of-type(3) .sec-head::before { content: '٠٢'; }
+    section:nth-of-type(4) .sec-head::before { content: '٠٣'; }
+    section:nth-of-type(5) .sec-head::before { content: '٠٤'; }
+    section:nth-of-type(6) .sec-head::before { content: '٠٥'; }
+    section:nth-of-type(7) .sec-head::before { content: '٠٦'; }
+    section:nth-of-type(8) .sec-head::before { content: '٠٧'; }
+
+    section {
+      padding-block: clamp(84px, 10vw, 130px);
+    }
+
+    /* ---------- Scroll reveal ---------- */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.8s var(--ease), transform 0.8s var(--ease);
+      transition-delay: var(--rd, 0s);
+    }
+
+    .reveal.in-view {
+      opacity: 1;
+      transform: none;
+    }
+
+    /* ============================================================
+       NAVBAR — production-desk header bar
+       ============================================================ */
+    .navbar {
+      position: fixed;
+      top: 0;
+      inset-inline: 0;
+      height: var(--nav-h);
+      background-color: var(--color-nav-translucent);
+      -webkit-backdrop-filter: blur(14px);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--hairline);
+      z-index: 1000;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .navbar.scrolled {
+      background-color: var(--color-nav-solid);
+      box-shadow: 0 12px 34px var(--color-shadow-soft);
+    }
+
+    .nav-inner {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .logo {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.15;
+    }
+
+    .logo-latin {
+      font-family: var(--font-latin);
+      font-weight: 800;
+      font-size: 1.18rem;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+    }
+
+    .logo-latin em {
+      font-style: normal;
+      color: var(--color-ink-soft);
+    }
+
+    .logo-sub {
+      font-family: var(--font-mono);
+      font-size: 0.6rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      color: var(--sage);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .nav-links a {
+      position: relative;
+      font-weight: 500;
+      font-size: 0.98rem;
+      color: var(--ink);
+      padding: 8px 14px;
+      border-radius: var(--r-sm);
+      transition: color 0.25s ease;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: 2px;
+      inset-inline-start: 14px;
+      width: calc(100% - 28px);
+      height: 2px;
+      background-color: var(--saffron);
+      transform: scaleX(0);
+      transform-origin: center;
+      transition: transform 0.3s var(--ease);
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--saffron);
+    }
+
+    .nav-links a.active::after,
+    .nav-links a:hover::after {
+      transform: scaleX(1);
+    }
+
+    .nav-cta {
+      padding: 9px 20px;
+      font-size: 0.88rem;
+      min-height: 44px;
+      background-color: transparent;
+      color: var(--saffron);
+      border: 1.5px solid var(--saffron);
+    }
+
+    .nav-cta:hover {
+      background-color: var(--saffron);
+      color: #FFFFFF;
+      border-color: var(--saffron);
+    }
+
+    .nav-toggle {
+      display: none;
+      background: none;
+      border: 1.5px solid var(--saffron);
+      border-radius: var(--r-sm);
+      cursor: pointer;
+      padding: 9px 10px;
+      flex-direction: column;
+      gap: 4px;
+      transition: background-color 0.25s ease;
+    }
+
+    .nav-toggle:hover {
+      background-color: var(--saffron-tint);
+    }
+
+    .nav-toggle span {
+      display: block;
+      width: 20px;
+      height: 2px;
+      background-color: var(--saffron);
+      border-radius: 2px;
+      transition: transform 0.3s var(--ease), opacity 0.3s ease;
+    }
+
+    .nav-toggle.open span:nth-child(1) {
+      transform: translateY(6px) rotate(45deg);
+    }
+
+    .nav-toggle.open span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .nav-toggle.open span:nth-child(3) {
+      transform: translateY(-6px) rotate(-45deg);
+    }
+
+    /* ============================================================
+       HERO — the account brief
+       ============================================================ */
+    .hero {
+      position: relative;
+      padding-top: calc(var(--nav-h) + clamp(40px, 7vw, 84px));
+      padding-bottom: clamp(72px, 9vw, 120px);
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        repeating-linear-gradient(135deg, rgba(201, 169, 110, 0.05) 0 1px, transparent 1px 26px),
+        repeating-linear-gradient(45deg, rgba(201, 169, 110, 0.04) 0 1px, transparent 1px 26px);
+      pointer-events: none;
+    }
+
+    .hero-top {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      border-bottom: 1px solid var(--hairline);
+      padding-bottom: 16px;
+      margin-bottom: clamp(44px, 7vw, 76px);
+    }
+
+    .doc-label {
+      font-family: var(--font-mono);
+      font-size: 0.76rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      color: var(--sage);
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .doc-label i {
+      color: var(--color-ink-soft);
+    }
+
+    .doc-status {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--font-mono);
+      font-size: 0.74rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      color: var(--ink);
+      background-color: var(--linen);
+      border: 1px solid var(--hairline);
+      padding: 6px 14px;
+      border-radius: var(--r-full);
+    }
+
+    .doc-status .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: var(--saffron);
+      box-shadow: 0 0 0 3px var(--saffron-tint);
+      animation: pulse-dot 2.4s ease-in-out infinite;
+    }
+
+    /* ---------- Page-load choreography (Framer-style orchestrated entrance) ---------- */
+    @keyframes rise-in {
+      from {
+        opacity: 0;
+        transform: translateY(16px);
+      }
+      to {
+        opacity: 1;
+        transform: none;
+      }
+    }
+
+    .hero-name,
+    .hero-tagline,
+    .hero-desc,
+    .hero-ctas,
+    .ledger-stats,
+    .hero-tags {
+      animation: rise-in 0.7s var(--ease) both;
+    }
+
+    .hero-tagline { animation-delay: 0.08s; }
+    .hero-desc { animation-delay: 0.16s; }
+    .hero-ctas { animation-delay: 0.24s; }
+    .ledger-stats { animation-delay: 0.32s; }
+    .hero-tags { animation-delay: 0.4s; }
+
+    @keyframes pulse-dot {
+      0%, 100% { box-shadow: 0 0 0 3px var(--saffron-tint); }
+      50% { box-shadow: 0 0 0 6px var(--color-pulse-faint); }
+    }
+
+    .hero-grid {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1.12fr 0.88fr;
+      gap: clamp(40px, 6vw, 84px);
+      align-items: start;
+    }
+
+    .hero-name {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: clamp(2.9rem, 6.6vw, 4.9rem);
+      line-height: 1.18;
+      color: var(--ink);
+      margin-bottom: 14px;
+      letter-spacing: -0.01em;
+    }
+
+    .hero-name em {
+      font-style: normal;
+      color: var(--color-ink-soft);
+      position: relative;
+      white-space: nowrap;
+    }
+
+    .hero-name em::after {
+      content: '';
+      position: absolute;
+      inset-inline: 0;
+      bottom: 6px;
+      height: 5px;
+      background-color: var(--saffron);
+      opacity: 0.55;
+      border-radius: 3px;
+      z-index: -1;
+    }
+
+    .hero-tagline {
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: clamp(1.2rem, 2.2vw, 1.65rem);
+      line-height: 1.55;
+      color: var(--ink-2);
+      margin-bottom: 22px;
+      max-width: 620px;
+      position: relative;
+      padding-inline-start: 18px;
+    }
+
+    .hero-tagline::before {
+      content: '';
+      position: absolute;
+      inset-inline-start: 0;
+      top: 8px;
+      bottom: 8px;
+      width: 3px;
+      background-color: var(--saffron);
+      border-radius: 2px;
+    }
+
+    .hero-desc {
+      font-size: 1.05rem;
+      color: var(--sage);
+      line-height: 1.95;
+      max-width: 580px;
+      margin-bottom: 34px;
+    }
+
+    .hero-desc strong {
+      color: var(--ink);
+      font-weight: 700;
+    }
+
+    .hero-ctas {
+      display: flex;
+      gap: 14px;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+
+    /* Ledger stats strip */
+    .ledger-stats {
+      display: flex;
+      align-items: stretch;
+      border: 1px solid var(--hairline);
+      border-radius: var(--r-md);
+      background-color: var(--linen);
+      padding: 0 8px;
+      margin-bottom: 34px;
+      width: fit-content;
+      max-width: 100%;
+    }
+
+    .ledger-stats li {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 2px;
+      padding: 16px 22px;
+      border-inline-end: 1px solid var(--hairline-soft);
+      min-width: 132px;
+    }
+
+    .ledger-stats li:last-child {
+      border-inline-end: none;
+    }
+
+    .ledger-stats b {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1.9rem;
+      line-height: 1.1;
+      color: var(--saffron);
+    }
+
+    .ledger-stats b i {
+      font-style: normal;
+      color: var(--saffron-deep);
+    }
+
+    .ledger-stats span {
+      font-family: var(--font-mono);
+      font-size: 0.64rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      color: var(--sage);
+    }
+
+    .hero-tags {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .tag {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      color: var(--sage);
+      border: 1px solid var(--hairline);
+      background-color: var(--linen);
+      padding: 5px 13px;
+      border-radius: var(--r-full);
+      transition: border-color 0.25s ease, color 0.25s ease;
+    }
+
+    .tag:hover {
+      border-color: var(--saffron-deep);
+      color: var(--saffron-deep);
+    }
+
+    /* ---------- Brief card (hero signature object) ---------- */
+    .hero-side {
+      position: relative;
+    }
+
+    .hero-portrait {
+      position: relative;
+      margin: 0 0 22px;
+      border-radius: var(--r-lg);
+      border: 1px solid var(--hairline);
+      overflow: hidden;
+      background-color: var(--linen);
+      box-shadow: var(--shadow-hard);
+    }
+
+    .hero-portrait img {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      display: block;
+    }
+
+    .hero-portrait::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: var(--r-lg);
+      pointer-events: none;
+      background-image:
+        linear-gradient(var(--gold-line), var(--gold-line)),
+        linear-gradient(var(--gold-line), var(--gold-line)),
+        linear-gradient(var(--gold-line), var(--gold-line)),
+        linear-gradient(var(--gold-line), var(--gold-line)),
+        linear-gradient(var(--gold-line), var(--gold-line)),
+        linear-gradient(var(--gold-line), var(--gold-line)),
+        linear-gradient(var(--gold-line), var(--gold-line)),
+        linear-gradient(var(--gold-line), var(--gold-line));
+      background-repeat: no-repeat;
+      background-size: 15px 1px, 1px 15px, 15px 1px, 1px 15px, 15px 1px, 1px 15px, 15px 1px, 1px 15px;
+      background-position: right top, right top, left top, left top, right bottom, right bottom, left bottom, left bottom;
+    }
+
+    .brief-card {
+      position: relative;
+      background-color: var(--bg-alt);
+      border: 1px solid var(--hairline);
+      border-radius: var(--r-lg);
+      box-shadow: var(--shadow-hard);
+      padding: 34px 32px 30px;
+      transition: box-shadow 0.4s var(--ease);
+    }
+
+    .brief-card:hover {
+      box-shadow: var(--shadow-hard), var(--shadow-lift);
+    }
+
+    .brief-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 18px;
+      margin-bottom: 20px;
+      border-bottom: 1px solid var(--hairline);
+    }
+
+    .brief-head .mono {
+      font-size: 0.68rem;
+      color: var(--saffron-deep);
+    }
+
+    .brief-id {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      font-weight: 600;
+      color: var(--sage);
+      background-color: var(--mist);
+      padding: 3px 10px;
+      border-radius: var(--r-sm);
+    }
+
+    .brief-fields {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      margin-bottom: 22px;
+    }
+
+    .bf-row {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 11px 0;
+      border-bottom: 1px dashed var(--hairline-soft);
+    }
+
+    .bf-row:last-child {
+      border-bottom: none;
+    }
+
+    .bf-row dt .mono {
+      font-size: 0.6rem;
+      color: var(--sage);
+      display: block;
+      margin-bottom: 3px;
+    }
+
+    .bf-row dd {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--ink);
+      text-align: end;
+      font-family: var(--font-body);
+    }
+
+    .bf-row dd .nl {
+      font-family: var(--font-latin);
+      font-weight: 700;
+      color: var(--saffron-deep);
+    }
+
+    .brief-checks {
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
+      margin-bottom: 24px;
+    }
+
+    .brief-checks li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--ink-2);
+    }
+
+    .brief-checks li i {
+      width: 20px;
+      height: 20px;
+      flex: 0 0 20px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.6rem;
+      color: #FFFFFF;
+      background-color: var(--saffron);
+      border-radius: var(--r-sm);
+    }
+
+    .brief-foot {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      border-top: 1px solid var(--hairline);
+      padding-top: 18px;
+      flex-wrap: wrap;
+    }
+
+    .brief-loc {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.86rem;
+      font-weight: 700;
+      color: var(--ink);
+    }
+
+    .brief-loc i {
+      color: var(--saffron-deep);
+    }
+
+    .brief-pill {
+      font-family: var(--font-mono);
+      font-size: 0.66rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      color: var(--color-ink-soft);
+      background-color: var(--saffron-tint);
+      border: 1px solid var(--color-line-accent-soft);
+      padding: 5px 12px;
+      border-radius: var(--r-full);
+    }
+
+    /* ---------- Q.C. rubber stamp (signature) ---------- */
+    .stamp {
+      position: absolute;
+      inset-inline-end: -14px;
+      bottom: -30px;
+      width: 124px;
+      height: 124px;
+      color: var(--saffron-deep);
+      mix-blend-mode: multiply;
+      opacity: 0;
+      animation: stamp-in 0.85s var(--ease) 0.65s forwards;
+      pointer-events: none;
+    }
+
+    .stamp svg {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    .stamp .ring {
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2.6;
+    }
+
+    .stamp .ring-inner {
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.6;
+      stroke-dasharray: 4 4;
+    }
+
+    .stamp text {
+      fill: currentColor;
+      font-family: var(--font-mono);
+      font-size: 12.4px;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+
+    .stamp-core {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-latin);
+      font-weight: 900;
+      font-size: 2rem;
+      line-height: 1;
+    }
+
+    .stamp-core small {
+      font-family: var(--font-mono);
+      font-size: 0.55rem;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      margin-top: 3px;
+    }
+
+    @keyframes stamp-in {
+      0% {
+        opacity: 0;
+        transform: scale(1.9) rotate(-26deg);
+      }
+      60% {
+        opacity: 1;
+        transform: scale(0.94) rotate(-10deg);
+      }
+      100% {
+        opacity: 0.88;
+        transform: scale(1) rotate(-13deg);
+      }
+    }
+
+    /* ============================================================
+       WORK — selected campaigns (case studies)
+       ============================================================ */
+    .work-section {
+      border-top: 1px solid var(--hairline);
+      background-color: var(--bg-alt);
+    }
+
+    .work-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: clamp(28px, 4vw, 44px);
+    }
+
+    .work-card {
+      background-color: var(--linen);
+      border: 1px solid var(--hairline);
+      border-radius: var(--r-lg);
+      overflow: hidden;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.4s var(--ease), box-shadow 0.4s var(--ease), border-color 0.4s ease;
+    }
+
+    .work-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-hard), var(--shadow-lift);
+      border-color: rgba(176, 137, 104, 0.6);
+    }
+
+    .testimonial-card,
+    .brief-card,
+    .identity-panel,
+    .contact-form,
+    .cs-impact {
+      background-image:
+        linear-gradient(var(--gold-line), var(--gold-line)),
+        linear-gradient(var(--gold-line), var(--gold-line)),
+        linear-gradient(var(--gold-line), var(--gold-line)),
+        linear-gradient(var(--gold-line), var(--gold-line)),
+        linear-gradient(var(--gold-line), var(--gold-line)),
+        linear-gradient(var(--gold-line), var(--gold-line)),
+        linear-gradient(var(--gold-line), var(--gold-line)),
+        linear-gradient(var(--gold-line), var(--gold-line));
+      background-repeat: no-repeat;
+      background-size: 15px 1px, 1px 15px, 15px 1px, 1px 15px, 15px 1px, 1px 15px, 15px 1px, 1px 15px;
+      background-position: right top, right top, left top, left top, right bottom, right bottom, left bottom, left bottom;
+    }
+
+    .work-cover {
+      position: relative;
+      aspect-ratio: 16 / 10;
+      overflow: hidden;
+      background-color: var(--mist);
+      border-bottom: 1px solid var(--hairline);
+    }
+
+    .work-cover img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.7s var(--ease);
+    }
+
+    .work-card:hover .work-cover img {
+      transform: scale(1.05);
+    }
+
+    .work-tape {
+      position: absolute;
+      top: 16px;
+      inset-inline-start: 16px;
+      font-family: var(--font-mono);
+      font-size: 0.66rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      color: #FFFFFF;
+      background-color: var(--saffron);
+      border: 1px solid var(--gold-line);
+      padding: 5px 12px;
+      border-radius: var(--r-sm);
+      box-shadow: 2px 2px 0 rgba(176, 137, 104, 0.3);
+    }
+
+    .work-body {
+      padding: 30px 30px 26px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .work-title {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1.55rem;
+      line-height: 1.4;
+      color: var(--ink);
+      margin-bottom: 14px;
+      transition: color 0.25s ease;
+    }
+
+    .work-card:hover .work-title {
+      color: var(--color-ink-soft);
+    }
+
+    .work-roles {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 16px;
+    }
+
+    .role-chip {
+      font-size: 0.74rem;
+      font-weight: 600;
+      font-family: var(--font-mono);
+      letter-spacing: 0.04em;
+      color: var(--color-ink-soft);
+      background-color: var(--saffron-tint);
+      border: 1px solid var(--color-line-accent-faint);
+      padding: 3px 10px;
+      border-radius: 4px;
+    }
+
+    .work-desc {
+      font-size: 0.97rem;
+      color: var(--sage);
+      line-height: 1.85;
+      margin-bottom: 22px;
+      flex-grow: 1;
+    }
+
+    .work-foot {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-top: 1px solid var(--hairline);
+      padding-top: 16px;
+    }
+
+    .work-link {
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--ink);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: color 0.25s ease, gap 0.25s ease;
+    }
+
+    .work-card:hover .work-link {
+      color: var(--color-ink-soft);
+      gap: 13px;
+    }
+
+    .work-foot i {
+      color: var(--saffron-deep);
+    }
+
+    /* ============================================================
+       CASE STUDY MODAL
+       ============================================================ */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background-color: var(--color-overlay-dark);
+      -webkit-backdrop-filter: blur(5px);
+      backdrop-filter: blur(5px);
+      z-index: 2000;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.35s ease, visibility 0.35s ease;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .modal-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .case-study-modal {
+      background-color: var(--paper);
+      width: min(1020px, 95%);
+      max-height: 90vh;
+      border-radius: var(--r-lg);
+      border: 1px solid var(--hairline);
+      box-shadow: 0 40px 90px var(--color-shadow-black);
+      overflow-y: auto;
+      overscroll-behavior: contain;
+      scrollbar-width: thin;
+      scrollbar-color: var(--saffron-deep) var(--mist);
+      position: relative;
+      transform: translateY(34px);
+      transition: transform 0.45s var(--ease);
+    }
+
+    .modal-overlay.active .case-study-modal {
+      transform: translateY(0);
+    }
+
+    .modal-close-btn {
+      position: sticky;
+      top: 18px;
+      float: inline-end;
+      margin-inline-end: 18px;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background-color: var(--ink);
+      color: var(--linen);
+      border: 1.5px solid var(--color-line-dark-soft);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      z-index: 10;
+      transition: background-color 0.25s ease, transform 0.35s var(--ease);
+    }
+
+    .modal-close-btn:hover {
+      background-color: var(--saffron-deep);
+      transform: rotate(90deg);
+    }
+
+    .cs-header {
+      background-color: var(--ink);
+      color: var(--linen);
+      padding: clamp(36px, 5vw, 58px) clamp(28px, 6vw, 64px) clamp(30px, 4vw, 44px);
+    }
+
+    .cs-tag {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      color: var(--saffron-hot);
+      margin-bottom: 14px;
+      display: block;
+    }
+
+    .cs-title {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: clamp(1.7rem, 3.4vw, 2.5rem);
+      line-height: 1.3;
+      margin-bottom: 12px;
+    }
+
+    .cs-sub {
+      font-size: 1.05rem;
+      color: var(--linen);
+      opacity: 0.85;
+      max-width: 640px;
+      line-height: 1.8;
+    }
+
+    .cs-meta {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background-color: var(--hairline);
+      border-bottom: 1px solid var(--hairline);
+    }
+
+    .cs-meta-item {
+      background-color: var(--mist);
+      padding: 18px 26px;
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    .cs-meta-item .mono {
+      font-size: 0.62rem;
+      color: var(--sage);
+    }
+
+    .cs-meta-val {
+      font-weight: 700;
+      font-size: 0.98rem;
+      color: var(--ink);
+    }
+
+    .cs-body {
+      padding: clamp(28px, 5vw, 48px) clamp(24px, 6vw, 64px);
+      display: flex;
+      flex-direction: column;
+      gap: 46px;
+    }
+
+    .cs-block-title {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1.35rem;
+      color: var(--ink);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .cs-block-title i {
+      width: 26px;
+      height: 26px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      color: #FFFFFF;
+      background-color: var(--saffron-deep);
+      border-radius: var(--r-sm);
+    }
+
+    .cs-overview {
+      font-size: 1.03rem;
+      color: var(--sage);
+      line-height: 1.95;
+      max-width: 720px;
+    }
+
+    .cs-rols {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+
+    .cs-rols li {
+      background-color: var(--linen);
+      border: 1px solid var(--hairline);
+      border-radius: var(--r-sm);
+      padding: 13px 16px;
+      font-size: 0.92rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      transition: border-color 0.25s ease;
+    }
+
+    .cs-rols li:hover {
+      border-color: var(--saffron-deep);
+    }
+
+    .cs-rols li i {
+      color: var(--saffron-deep);
+      font-size: 0.8rem;
+    }
+
+    .cs-gallery {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .cs-gallery-item {
+      overflow: hidden;
+      border: 1px solid var(--hairline);
+      border-radius: var(--r-sm);
+      background-color: var(--linen);
+    }
+
+    .cs-gallery-item.full-width {
+      grid-column: span 2;
+    }
+
+    .cs-gallery-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.6s var(--ease);
+    }
+
+    .cs-gallery-item:hover img {
+      transform: scale(1.03);
+    }
+
+    .cs-impact {
+      background-color: var(--saffron-tint);
+      border: 1px solid var(--color-line-accent);
+      border-inline-start: 4px solid var(--saffron-deep);
+      border-radius: var(--r-sm);
+      padding: 26px 28px;
+    }
+
+    .cs-impact .mono {
+      font-size: 0.64rem;
+      color: var(--saffron-deep);
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .cs-impact p {
+      font-size: 1.02rem;
+      font-weight: 600;
+      color: var(--ink);
+      line-height: 1.85;
+    }
+
+    /* ============================================================
+       PIPELINE + REELS (dark production section)
+       ============================================================ */
+    .reels-section {
+      background-color: var(--bg-alt);
+      color: var(--ink);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .reels-section .sec-title {
+      color: var(--ink);
+    }
+
+    .reels-section .sec-sub {
+      color: var(--sage);
+    }
+
+    .reels-section .sec-kicker .mono {
+      color: var(--saffron);
+    }
+
+    .reels-section .sec-kicker .rule {
+      background-color: var(--gold-line);
+    }
+
+    .pipeline {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 1px;
+      background-color: var(--hairline);
+      border: 1px solid var(--hairline);
+      border-radius: var(--r-lg);
+      overflow: hidden;
+      margin-bottom: clamp(56px, 8vw, 96px);
+    }
+
+    .phase {
+      position: relative;
+      background-color: var(--linen);
+      padding: 26px 22px 24px;
+      min-height: 218px;
+      display: flex;
+      flex-direction: column;
+      transition: background-color 0.5s ease;
+    }
+
+    .phase-num {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      color: var(--sage);
+      margin-bottom: 22px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: color 0.5s ease;
+    }
+
+    .phase-num::before {
+      content: '';
+      width: 22px;
+      height: 1px;
+      background-color: var(--gold-line);
+      transition: background-color 0.5s ease;
+    }
+
+    .phase h4 {
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: 1.28rem;
+      color: var(--ink);
+      margin-bottom: 10px;
+      line-height: 1.4;
+    }
+
+    .phase p {
+      font-size: 0.85rem;
+      color: var(--sage);
+      line-height: 1.8;
+    }
+
+    .phase-tick {
+      position: absolute;
+      top: 22px;
+      inset-inline-end: 20px;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      border: 1.5px solid var(--hairline-dark);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.7rem;
+      color: transparent;
+      transition: all 0.5s ease 0s;
+    }
+
+    .pipeline.run .phase {
+      transition-delay: calc(var(--i) * 0.14s);
+    }
+
+    .pipeline.run .phase-num {
+      color: var(--saffron);
+    }
+
+    .pipeline.run .phase-num::before {
+      background-color: var(--saffron);
+    }
+
+    .pipeline.run .phase-tick {
+      border-color: var(--saffron);
+      background-color: var(--saffron);
+      color: #FFFFFF;
+      transition-delay: calc(var(--i) * 0.14s + 0.35s);
+    }
+
+    .pipeline.run .phase p {
+      transition: color 0.5s ease;
+      transition-delay: calc(var(--i) * 0.14s + 0.2s);
+      color: var(--ink-2);
+    }
+
+    .reels-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: clamp(22px, 3vw, 34px);
+    }
+
+    .reel-card {
+      position: relative;
+      aspect-ratio: 9 / 16;
+      border-radius: var(--r-md);
+      border: 1px solid var(--hairline-dark);
+      overflow: hidden;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      transition: transform 0.4s var(--ease), border-color 0.3s ease, box-shadow 0.4s ease;
+    }
+
+    .reel-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--saffron);
+      box-shadow: 0 22px 50px var(--color-shadow-black);
+    }
+
+    .reel-thumbnail {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s var(--ease), opacity 0.6s ease;
+      opacity: 0.82;
+    }
+
+    .reel-card:hover .reel-thumbnail {
+      transform: scale(1.06);
+      opacity: 1;
+    }
+
+    .reel-play {
+      position: absolute;
+      top: 46%;
+      inset-inline-start: 50%;
+      transform: translate(-50%, -50%);
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      background-color: var(--color-accent-recessed);
+      color: #FFFFFF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      box-shadow: 3px 3px 0 var(--color-shadow-black-soft);
+      transition: transform 0.35s var(--ease), background-color 0.3s ease;
+    }
+
+    .reel-card:hover .reel-play {
+      transform: translate(-50%, -50%) scale(1.12);
+      background-color: var(--saffron);
+    }
+
+    .reel-info {
+      position: relative;
+      z-index: 2;
+      padding: 22px 20px;
+      background: linear-gradient(to top, var(--color-shade-deep) 0%, var(--color-shade-mid) 55%, transparent 100%);
+    }
+
+    .reel-cat {
+      font-family: var(--font-mono);
+      font-size: 0.62rem;
+      font-weight: 600;
+      letter-spacing: 0.09em;
+      color: var(--saffron);
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .reel-title {
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: 1.15rem;
+      line-height: 1.5;
+      color: var(--linen);
+    }
+
+    /* ---------- Video modal ---------- */
+    .video-modal {
+      position: fixed;
+      inset: 0;
+      background-color: var(--color-overlay-ink-soft);
+      z-index: 2500;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.35s ease, visibility 0.35s ease;
+      padding: 20px;
+    }
+
+    .video-modal.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .video-frame {
+      width: min(420px, 92vw);
+      aspect-ratio: 9 / 16;
+      background-color: var(--prim-black);
+      border-radius: var(--r-md);
+      border: 1px solid var(--hairline-dark);
+      overflow: hidden;
+      position: relative;
+      box-shadow: 0 30px 80px var(--color-shadow-black-deep);
+    }
+
+    .video-frame video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .video-modal-close {
+      position: absolute;
+      top: 14px;
+      inset-inline-end: 14px;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background-color: var(--linen);
+      color: var(--ink);
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
+      z-index: 5;
+      transition: background-color 0.25s ease, transform 0.3s var(--ease);
+    }
+
+    .video-modal-close:hover {
+      background-color: var(--saffron);
+      transform: rotate(90deg);
+    }
+
+    /* ============================================================
+       CAPABILITIES — service ledger rows
+       ============================================================ */
+    .services-section {
+      border-top: 1px solid var(--hairline);
+    }
+
+    .services-list {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .service-row {
+      display: grid;
+      grid-template-columns: 1.1fr 1.5fr 0.9fr;
+      gap: clamp(20px, 3vw, 44px);
+      align-items: center;
+      padding: 30px 8px 30px 26px;
+      border-top: 1px solid var(--hairline);
+      position: relative;
+      transition: background-color 0.35s ease;
+    }
+
+    .service-row:last-child {
+      border-bottom: 1px solid var(--hairline);
+    }
+
+    .service-row::before {
+      content: '';
+      position: absolute;
+      inset-block: 0;
+      inset-inline-start: 0;
+      width: 3px;
+      background-color: var(--saffron);
+      transform: scaleY(0);
+      transform-origin: top;
+      transition: transform 0.4s var(--ease);
+    }
+
+    .service-row:hover {
+      background-color: var(--mist);
+    }
+
+    .service-row:hover::before {
+      transform: scaleY(1);
+    }
+
+    .svc-head {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .svc-icon {
+      width: 52px;
+      height: 52px;
+      flex: 0 0 52px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      color: #FFFFFF;
+      background-color: var(--saffron);
+      border-radius: var(--r-md);
+      box-shadow: 3px 3px 0 rgba(176, 137, 104, 0.3);
+      transition: transform 0.3s var(--ease);
+    }
+
+    .service-row:hover .svc-icon {
+      transform: translateY(-3px);
+    }
+
+    .svc-title {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1.35rem;
+      line-height: 1.35;
+      color: var(--ink);
+    }
+
+    .svc-ar {
+      display: block;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--sage);
+      margin-top: 2px;
+    }
+
+    .svc-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .svc-chips li {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      color: var(--ink-2);
+      border: 1px solid var(--hairline);
+      background-color: var(--linen);
+      padding: 5px 12px;
+      border-radius: 4px;
+      transition: border-color 0.25s ease;
+    }
+
+    .svc-chips li:hover {
+      border-color: var(--saffron-deep);
+    }
+
+    .svc-out {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+      justify-self: end;
+      text-align: end;
+      border-inline-start: 1px solid var(--hairline);
+      padding-inline-start: 22px;
+    }
+
+    .svc-out .mono {
+      font-size: 0.6rem;
+      color: var(--color-ink-soft);
+    }
+
+    .svc-out b {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--ink);
+      font-family: var(--font-body);
+    }
+
+    /* ============================================================
+       EXPERIENCE — résumé ledger rows
+       ============================================================ */
+    .experience-section {
+      background-color: var(--linen);
+      border-top: 1px solid var(--hairline);
+    }
+
+    .exp-row {
+      display: grid;
+      grid-template-columns: 190px 1px 1fr;
+      gap: clamp(24px, 4vw, 56px);
+      padding-block: clamp(34px, 5vw, 52px);
+    }
+
+    .exp-row + .exp-row {
+      border-top: 1px solid var(--hairline);
+    }
+
+    .exp-period {
+      font-family: var(--font-mono);
+      font-size: 0.86rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      color: var(--saffron-deep);
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      padding-block-start: 6px;
+    }
+
+    .exp-period em {
+      font-style: normal;
+      font-size: 0.68rem;
+      color: var(--sage);
+      letter-spacing: 0.12em;
+    }
+
+    .exp-line {
+      background-color: var(--hairline);
+      position: relative;
+    }
+
+    .exp-line::before {
+      content: '';
+      position: absolute;
+      top: 8px;
+      inset-inline-start: 50%;
+      transform: translateX(50%);
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: var(--saffron);
+      border: 3px solid var(--linen);
+      box-shadow: 0 0 0 1.5px var(--saffron-deep);
+    }
+
+    .exp-company {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1.6rem;
+      line-height: 1.35;
+      color: var(--ink);
+      margin-bottom: 4px;
+    }
+
+    .exp-role {
+      display: inline-block;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--saffron-deep);
+      margin-bottom: 18px;
+    }
+
+    .exp-duties {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .exp-duties li {
+      position: relative;
+      font-size: 0.96rem;
+      color: var(--sage);
+      line-height: 1.85;
+      padding-inline-start: 20px;
+    }
+
+    .exp-duties li::before {
+      content: '◆';
+      position: absolute;
+      inset-inline-start: 0;
+      top: 0.45em;
+      width: auto;
+      height: auto;
+      background: none;
+      border-radius: 0;
+      transform: none;
+      color: var(--saffron);
+      font-size: 0.6rem;
+      line-height: 1;
+    }
+
+    /* ============================================================
+       ABOUT — identity panel + bio
+       ============================================================ */
+    .about-section {
+      border-top: 1px solid var(--hairline);
+      background-color: var(--bg-alt);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 0.86fr 1.14fr;
+      gap: clamp(40px, 6vw, 84px);
+      align-items: start;
+    }
+
+    .identity-panel {
+      position: relative;
+      background-color: var(--linen);
+      border: 1px solid var(--hairline);
+      border-radius: var(--r-lg);
+      box-shadow: var(--shadow-hard);
+      padding: 40px 36px 34px;
+      text-align: center;
+    }
+
+    .identity-panel::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      inset-inline: 0;
+      height: 6px;
+      background: linear-gradient(to left, var(--saffron) 0 55%, var(--ink) 55% 100%);
+      border-radius: var(--r-lg) var(--r-lg) 0 0;
+    }
+
+    .monogram {
+      width: 96px;
+      height: 96px;
+      margin: 6px auto 20px;
+      border-radius: 50%;
+      background-color: var(--saffron);
+      color: #FFFFFF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 2.6rem;
+      border: 2px solid var(--gold-line);
+      box-shadow: 4px 4px 0 rgba(176, 137, 104, 0.2);
+    }
+
+    .ip-name {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1.7rem;
+      color: var(--ink);
+      margin-bottom: 2px;
+    }
+
+    .ip-latin {
+      font-family: var(--font-mono);
+      font-size: 0.66rem;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      color: var(--saffron-deep);
+      display: block;
+      margin-bottom: 26px;
+    }
+
+    .ip-facts {
+      border-top: 1px solid var(--hairline);
+      padding-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      text-align: start;
+    }
+
+    .ip-facts li {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      font-size: 0.94rem;
+      font-weight: 600;
+      color: var(--ink);
+    }
+
+    .ip-facts li .mono {
+      font-size: 0.6rem;
+      color: var(--color-ink-soft);
+    }
+
+    .ip-facts li i {
+      color: var(--saffron-deep);
+      font-size: 0.8rem;
+    }
+
+    .about-bio {
+      font-size: 1.06rem;
+      color: var(--sage);
+      line-height: 1.95;
+      margin-bottom: 30px;
+    }
+
+    .about-bio strong {
+      color: var(--ink);
+    }
+
+    .about-bullets {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px 22px;
+      margin-bottom: 36px;
+    }
+
+    .about-bullet-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-weight: 600;
+      color: var(--ink);
+      font-size: 0.94rem;
+      line-height: 1.6;
+    }
+
+    .about-bullet-item i {
+      color: var(--saffron-deep);
+      margin-block-start: 3px;
+    }
+
+    /* ============================================================
+       TESTIMONIALS — quote ledger
+       ============================================================ */
+    .testimonials-section {
+      background-color: var(--linen);
+      border-top: 1px solid var(--hairline);
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: clamp(20px, 3vw, 36px);
+    }
+
+    .testimonial-card {
+      background-color: var(--paper);
+      border: 1px solid var(--hairline);
+      border-radius: var(--r-md);
+      padding: 32px 28px 26px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      transition: transform 0.35s var(--ease), box-shadow 0.35s ease;
+    }
+
+    .testimonial-card::before {
+      content: '«';
+      position: absolute;
+      top: 14px;
+      inset-inline-end: 20px;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 3.2rem;
+      line-height: 1;
+      color: var(--saffron);
+      opacity: 0.5;
+    }
+
+    .testimonial-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-hard-sm);
+    }
+
+    .testimonial-stars {
+      color: var(--gold-line);
+      font-size: 0.62rem;
+      letter-spacing: 3px;
+      margin-bottom: 16px;
+      font-family: var(--font-mono);
+    }
+
+    .testimonial-quote {
+      font-size: 0.99rem;
+      color: var(--ink-2);
+      line-height: 1.9;
+      font-weight: 500;
+      margin-bottom: 24px;
+      flex-grow: 1;
+    }
+
+    .testimonial-client {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      border-top: 1px solid var(--hairline);
+      padding-top: 18px;
+    }
+
+    .client-avatar {
+      width: 46px;
+      height: 46px;
+      flex: 0 0 46px;
+      border-radius: 50%;
+      background-color: var(--saffron);
+      color: #FFFFFF;
+      border: 2px solid var(--gold-line);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1.2rem;
+    }
+
+    .client-name {
+      font-weight: 700;
+      font-size: 0.98rem;
+      color: var(--ink);
+      line-height: 1.4;
+    }
+
+    .client-role {
+      font-size: 0.78rem;
+      color: var(--sage);
+      font-family: var(--font-body);
+      font-weight: 500;
+    }
+
+    /* ============================================================
+       CONTACT — final ledger page
+       ============================================================ */
+    .contact-section {
+      background-color: var(--bg-mist);
+      color: var(--ink);
+    }
+
+    .contact-section .sec-title {
+      color: var(--ink);
+    }
+
+    .contact-section .sec-sub {
+      color: var(--sage);
+    }
+
+    .contact-section .sec-kicker .mono {
+      color: var(--saffron);
+    }
+
+    .contact-section .sec-kicker .rule {
+      background-color: var(--gold-line);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(40px, 6vw, 88px);
+      align-items: start;
+    }
+
+    .contact-info-title {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: clamp(1.7rem, 3.2vw, 2.4rem);
+      line-height: 1.35;
+      color: var(--ink);
+      margin-bottom: 14px;
+    }
+
+    .contact-info-desc {
+      font-size: 1.04rem;
+      color: var(--ink-2);
+      line-height: 1.9;
+      margin-bottom: 36px;
+      max-width: 520px;
+    }
+
+    .contact-info-desc strong {
+      color: var(--ink);
+    }
+
+    .contact-direct-links {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      border-top: 1px solid var(--hairline);
+    }
+
+    .contact-direct-item {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 17px 4px;
+      border-bottom: 1px solid var(--hairline);
+      font-weight: 600;
+      color: var(--ink);
+      font-size: 1rem;
+      transition: padding-inline-start 0.3s var(--ease);
+    }
+
+    .contact-direct-item:hover {
+      padding-inline-start: 12px;
+    }
+
+    .contact-direct-item i {
+      width: 42px;
+      height: 42px;
+      flex: 0 0 42px;
+      border-radius: 50%;
+      background-color: var(--saffron);
+      border: 1px solid var(--gold-line);
+      color: #FFFFFF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.95rem;
+    }
+
+    .contact-direct-item .mono {
+      font-size: 0.6rem;
+      color: var(--sage);
+      display: block;
+      letter-spacing: 0.12em;
+    }
+
+    /* ---------- Underline-form ---------- */
+    .contact-form {
+      background-color: var(--linen);
+      border: 1px solid var(--hairline);
+      border-radius: var(--r-lg);
+      padding: clamp(28px, 4vw, 44px);
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+      box-shadow: var(--shadow-hard);
+    }
+
+    .form-head .mono {
+      font-size: 0.68rem;
+      color: var(--saffron);
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .form-head h3 {
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: 1.4rem;
+      color: var(--ink);
+    }
+
+    .field {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .field label {
+      font-family: var(--font-mono);
+      font-size: 0.62rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      color: var(--sage);
+      transition: color 0.25s ease;
+    }
+
+    .field:focus-within label {
+      color: var(--saffron);
+    }
+
+    .form-input,
+    .form-textarea {
+      width: 100%;
+      padding: 12px 14px;
+      background-color: #FFFFFF;
+      border: 1px solid var(--gold-line);
+      border-radius: 8px;
+      color: var(--ink);
+      font-family: var(--font-body);
+      font-size: 1rem;
+      font-weight: 500;
+      line-height: 1.7;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .form-input::placeholder,
+    .form-textarea::placeholder {
+      color: var(--sage);
+      font-weight: 400;
+    }
+
+    .form-input:focus,
+    .form-textarea:focus {
+      outline: none;
+      border-color: var(--saffron);
+      box-shadow: 0 0 0 3px rgba(176, 137, 104, 0.15);
+    }
+
+    .form-textarea {
+      resize: vertical;
+      min-height: 96px;
+    }
+
+    .form-success {
+      display: none;
+      align-items: center;
+      gap: 12px;
+      background-color: var(--color-accent-ghost);
+      border: 1px solid var(--color-line-accent);
+      border-radius: var(--r-sm);
+      padding: 14px 18px;
+      font-weight: 600;
+      color: var(--ink);
+      font-size: 0.95rem;
+    }
+
+    .form-success i {
+      color: var(--saffron);
+      font-size: 1.1rem;
+    }
+
+    .form-success.show {
+      display: flex;
+      animation: rise-in 0.5s var(--ease);
+    }
+
+    @keyframes rise-in {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: none; }
+    }
+
+    .form-note {
+      font-family: var(--font-mono);
+      font-size: 0.62rem;
+      letter-spacing: 0.06em;
+      color: var(--sage);
+      text-align: center;
+    }
+
+    /* ============================================================
+       FOOTER
+       ============================================================ */
+    .footer {
+      background-color: var(--color-ink-deep);
+      color: var(--saffron-hot);
+      padding: 30px 0;
+      border-top: 2px solid var(--gold-line);
+      font-size: 0.85rem;
+    }
+
+    .footer-flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .footer-brand {
+      font-family: var(--font-latin);
+      font-weight: 700;
+      color: var(--linen);
+      font-size: 0.95rem;
+      letter-spacing: -0.01em;
+    }
+
+    .footer-brand span {
+      color: var(--saffron-hot);
+    }
+
+    .footer-seal {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 34px;
+      height: 34px;
+      margin-inline-end: 12px;
+      border: 1.5px solid var(--saffron-hot);
+      border-radius: 50%;
+      color: var(--saffron-hot);
+      font-family: var(--font-latin);
+      font-weight: 800;
+      font-size: 0.8rem;
+      line-height: 1;
+      transform: rotate(-8deg);
+      opacity: 0.85;
+    }
+
+    .footer-seal small {
+      font-family: var(--font-mono);
+      font-size: 0.42rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      margin-top: 1px;
+    }
+
+    .footer-meta {
+      font-family: var(--font-mono);
+      font-size: 0.66rem;
+      letter-spacing: 0.08em;
+      color: var(--saffron-hot);
+      opacity: 0.85;
+    }
+
+    
+    /* Dark section mono overrides — saffron on dark backgrounds */
+    .reels-section .sec-kicker .mono,
+    .contact-section .sec-kicker .mono {
+      color: var(--saffron);
+    }
+/* ============================================================
+       RESPONSIVE
+       ============================================================ */
+    @media (max-width: 1100px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 72px;
+      }
+
+      .brief-card {
+        max-width: 560px;
+      }
+
+      .pipeline {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .service-row {
+        grid-template-columns: 1.1fr 1.4fr;
+      }
+
+      .svc-out {
+        grid-column: 2;
+        justify-self: start;
+        text-align: start;
+        border-inline-start: none;
+        padding-inline-start: 0;
+        border-top: 1px dashed var(--hairline);
+        padding-top: 12px;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 56px;
+      }
+
+      .identity-panel {
+        max-width: 480px;
+      }
+
+      .testimonials-grid {
+        grid-template-columns: 1fr;
+        max-width: 640px;
+      }
+    }
+
+    @media (max-width: 991px) {
+      .work-grid {
+        grid-template-columns: 1fr;
+        max-width: 640px;
+      }
+
+      .exp-row {
+        grid-template-columns: 1fr;
+        gap: 6px;
+        padding-block: 30px;
+      }
+
+      .exp-period {
+        flex-direction: row;
+        align-items: baseline;
+        gap: 10px;
+        padding-block-start: 0;
+      }
+
+      .exp-line {
+        display: none;
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        position: absolute;
+        top: calc(100% + 10px);
+        inset-inline: 12px;
+        background-color: var(--linen);
+        border: 1px solid var(--hairline);
+        border-radius: var(--r-md);
+        box-shadow: var(--shadow-lift);
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 14px;
+        opacity: 0;
+        pointer-events: none;
+        transform: translateY(-12px);
+        transition: opacity 0.3s ease, transform 0.3s var(--ease);
+      }
+
+      .nav-links a {
+        padding: 13px 14px;
+        font-size: 1.05rem;
+        font-weight: 600;
+        border-bottom: 1px solid var(--hairline-soft);
+        border-radius: 0;
+      }
+
+      .nav-links a:last-child {
+        border-bottom: none;
+      }
+
+      .nav-links a::after {
+        display: none;
+      }
+
+      .nav-links a.active {
+        background-color: var(--saffron-tint);
+      }
+
+      .nav-links.open {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateY(0);
+      }
+
+      .nav-toggle {
+        display: flex;
+      }
+
+      .nav-cta {
+        display: none;
+      }
+
+      .hero-cols {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-ctas {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .ledger-stats {
+        width: 100%;
+        flex-direction: row;
+      }
+
+      .ledger-stats li {
+        flex: 1;
+        min-width: 0;
+        padding: 14px 10px;
+      }
+
+      .ledger-stats b {
+        font-size: 1.5rem;
+      }
+
+      .pipeline {
+        grid-template-columns: 1fr;
+      }
+
+      .phase {
+        min-height: 0;
+      }
+
+      .reels-grid {
+        grid-template-columns: 1fr;
+        max-width: 420px;
+        margin-inline: auto;
+      }
+
+      .service-row {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        padding: 26px 6px;
+      }
+
+      .svc-out {
+        grid-column: auto;
+      }
+
+      .cs-meta {
+        grid-template-columns: 1fr;
+      }
+
+      .cs-rols,
+      .cs-gallery {
+        grid-template-columns: 1fr;
+      }
+
+      .cs-gallery-item.full-width {
+        grid-column: span 1;
+      }
+
+      .about-bullets {
+        grid-template-columns: 1fr;
+      }
+
+      .stamp {
+        inset-inline-end: -6px;
+        bottom: -26px;
+        width: 104px;
+        height: 104px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .brief-card,
+      .identity-panel,
+      .contact-form {
+        box-shadow: var(--shadow-hard-sm);
+      }
+
+      .hero-name {
+        font-size: 2.5rem;
+      }
+
+      .ledger-stats li {
+        padding: 12px 8px;
+      }
+
+      .ledger-stats b {
+        font-size: 1.35rem;
+      }
+
+      .ledger-stats span {
+        font-size: 0.56rem;
+      }
+
+      .sec-head {
+        margin-bottom: 44px;
+      }
+
+      .work-tape {
+        top: 10px;
+        inset-inline-start: 10px;
+        font-size: 0.58rem;
+        padding: 4px 9px;
+      }
+
+      .svc-icon {
+        width: 44px;
+        height: 44px;
+        flex-basis: 44px;
+        font-size: 1rem;
+      }
+
+      .doc-status {
+        font-size: 0.66rem;
+      }
+
+      .monogram {
+        width: 80px;
+        height: 80px;
+        font-size: 2.1rem;
+      }
+    }
+
+    /* ---------- Reduced motion ---------- */
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none;
+      }
+
+      .stamp {
+        opacity: 0.88;
+        transform: rotate(-13deg);
+        animation: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ================= NAVBAR ================= -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="#home" class="logo" aria-label="Donia Gamal Portfolio">
+        <span class="logo-latin">Donia<em>.</em>Gamal</span>
+        <span class="logo-sub">ACCOUNT MANAGER · TEAM LEADER</span>
+      </a>
+
+      <nav class="nav-links" id="navLinks" aria-label="التنقل الرئيسي">
+        <a href="#work">الأعمال</a>
+        <a href="#capabilities">الخدمات</a>
+        <a href="#experience">الخبرة</a>
+        <a href="#about">عن دنيا</a>
+        <a href="#contact">التواصل</a>
+      </nav>
+
+      <div class="nav-actions" style="display: flex; align-items: center; gap: 12px;">
+        <a href="#contact" class="btn btn-dark nav-cta">تواصل معي <i class="fa-solid fa-arrow-left-long"></i></a>
+        <button class="nav-toggle" id="navToggle" aria-label="فتح القائمة" aria-expanded="false" aria-controls="navLinks">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= HERO — ACCOUNT BRIEF ================= -->
+  <section class="hero" id="home">
+    <div class="container">
+      <div class="hero-top">
+        <span class="doc-label"><i class="fa-solid fa-file-lines"></i> ملف تعريفي · BRIEF #001 — PERSONAL ACCOUNT</span>
+        <span class="doc-status"><span class="dot"></span> جاهزة للتكليف — السعودية</span>
+      </div>
+
+      <div class="hero-grid">
+        <div class="hero-main">
+          <h1 class="hero-name">دنيا <em>جمال</em></h1>
+
+          <p class="hero-tagline">إدارة الحسابات وقيادة الحملات التسويقية بتحقيق نتائج ملموسة</p>
+
+          <p class="hero-desc">
+            متخصصة في <strong>إدارة حسابات كبار العملاء (Account Management)</strong>، وتطوير
+            <strong>البريفات الاستراتيجية (Briefs)</strong>، وقيادة فرق العمل الإبداعية، وضمان أعلى معايير الجودة
+            والالتزام بالمواعيد في الحملات التسويقية المتكاملة.
+          </p>
+
+          <div class="hero-ctas">
+            <a href="#work" class="btn btn-dark">عرض الأعمال المختارة <i class="fa-solid fa-arrow-left-long"></i></a>
+            <a href="#contact" class="btn btn-ghost"><i class="fa-solid fa-download"></i> تحميل السيرة الذاتية (CV)</a>
+          </div>
+
+          <ul class="ledger-stats">
+            <li><b>12<i>+</i></b><span>حملة موسمية مُسلَّمة</span></li>
+            <li><b>4<i>+</i></b><span>سنوات إدارة حسابات</span></li>
+            <li><b>2</b><span>وكالات تسويق</span></li>
+          </ul>
+
+          <div class="hero-tags">
+            <span class="tag">Client Communication</span>
+            <span class="tag">Brief Development</span>
+            <span class="tag">Campaign Operations</span>
+            <span class="tag">Team Leadership</span>
+            <span class="tag">Quality Control</span>
+          </div>
+        </div>
+
+        <aside class="hero-side">
+          <figure class="hero-portrait reveal" style="--rd: 0.05s">
+            <img src="hero.png" alt="دنيا جمال — Account Manager & Team Leader" decoding="async" />
+          </figure>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= WORK ================= -->
+  <section class="work-section" id="work">
+    <div class="container">
+      <header class="sec-head reveal">
+        <div class="sec-kicker">
+          <span class="mono">Selected Brands & Campaigns</span>
+          <span class="rule"></span>
+        </div>
+        <h2 class="sec-title">أعمال ممتازة وإدارة حسابات ناجحة</h2>
+        <p class="sec-sub">عرض لعدد من البراندات والحملات التي توليت قيادة وإدارة حساباتها وتنسيق كافة مراحل تنفيذها.</p>
+      </header>
+
+      <div class="work-grid">
+        <article class="work-card reveal" onclick="openCaseStudy('brand1')" tabindex="0"
+          onkeydown="if(event.key==='Enter')openCaseStudy('brand1')">
+          <div class="work-cover">
+            <img decoding="async" src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=800&q=80" alt="Saudi Retail Brand" loading="lazy" />
+            <span class="work-tape">RETAIL &amp; LIFESTYLE</span>
+          </div>
+          <div class="work-body">
+            <h3 class="work-title">براند تجزئة ولايف ستايل سعودي</h3>
+            <div class="work-roles">
+              <span class="role-chip">Account Management</span>
+              <span class="role-chip">Seasonal Campaigns</span>
+              <span class="role-chip">Team Leadership</span>
+            </div>
+            <p class="work-desc">إدارة حساب البراند بالكامل، إعداد الـBriefs الموسمية، تنسيق خطة الحملة مع فريق التصميم وصناع المحتوى، وضمان دقة التسليم في المواعيد المحددة.</p>
+            <div class="work-foot">
+              <span class="work-link">قراءة الـ Case Study بالكامل <i class="fa-solid fa-arrow-left-long"></i></span>
+              <i class="fa-solid fa-folder-open" style="color: var(--saffron-deep);"></i>
+            </div>
+          </div>
+        </article>
+
+        <article class="work-card reveal" style="--rd: 0.1s" onclick="openCaseStudy('brand2')" tabindex="0"
+          onkeydown="if(event.key==='Enter')openCaseStudy('brand2')">
+          <div class="work-cover">
+            <img decoding="async" src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80" alt="Hospitality Brand" loading="lazy" />
+            <span class="work-tape">F&amp;B &amp; CULINARY</span>
+          </div>
+          <div class="work-body">
+            <h3 class="work-title">مجموعة مطاعم وضيافة راقية</h3>
+            <div class="work-roles">
+              <span class="role-chip">Client Relations</span>
+              <span class="role-chip">Launch Campaigns</span>
+              <span class="role-chip">Reel Scripts QC</span>
+            </div>
+            <p class="work-desc">التواصل المباشر مع ملاك المشروع، تنظيم إطلاق الفروع الجديدة، صياغة سكريبتات الفيديوهات الترويجية ومتابعة المخرجين والمصممين.</p>
+            <div class="work-foot">
+              <span class="work-link">قراءة الـ Case Study بالكامل <i class="fa-solid fa-arrow-left-long"></i></span>
+              <i class="fa-solid fa-folder-open" style="color: var(--saffron-deep);"></i>
+            </div>
+          </div>
+        </article>
+
+        <article class="work-card reveal" onclick="openCaseStudy('brand3')" tabindex="0"
+          onkeydown="if(event.key==='Enter')openCaseStudy('brand3')">
+          <div class="work-cover">
+            <img decoding="async" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" alt="E-Commerce Brand" loading="lazy" />
+            <span class="work-tape">E-COMMERCE &amp; DIGITAL</span>
+          </div>
+          <div class="work-body">
+            <h3 class="work-title">منصة تجارة إلكترونية إقليمية</h3>
+            <div class="work-roles">
+              <span class="role-chip">Campaign Operations</span>
+              <span class="role-chip">Brief Development</span>
+              <span class="role-chip">Deliverables QC</span>
+            </div>
+            <p class="work-desc">تنسيق الحملات الإعلانية الرقمية الممولة، توزيع المهام على الكتاب والمصممين، ومراجعة مخرجات الحملات قبل إرسالها للاعتماد النهائي.</p>
+            <div class="work-foot">
+              <span class="work-link">قراءة الـ Case Study بالكامل <i class="fa-solid fa-arrow-left-long"></i></span>
+              <i class="fa-solid fa-folder-open" style="color: var(--saffron-deep);"></i>
+            </div>
+          </div>
+        </article>
+
+        <article class="work-card reveal" style="--rd: 0.1s" onclick="openCaseStudy('brand4')" tabindex="0"
+          onkeydown="if(event.key==='Enter')openCaseStudy('brand4')">
+          <div class="work-cover">
+            <img decoding="async" src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80" alt="Corporate Real Estate" loading="lazy" />
+            <span class="work-tape">CORPORATE &amp; REAL ESTATE</span>
+          </div>
+          <div class="work-body">
+            <h3 class="work-title">شركة تطوير عقاري واستثمار</h3>
+            <div class="work-roles">
+              <span class="role-chip">Executive Communication</span>
+              <span class="role-chip">Brand Positioning</span>
+              <span class="role-chip">Timeline Management</span>
+            </div>
+            <p class="work-desc">إدارة الهوية الإعلانية للمشاريع العقارية، عقد الاجتماعات الدورية مع الإدارة العليا، وإدارة جدول تسليم المخرجات السنوية.</p>
+            <div class="work-foot">
+              <span class="work-link">قراءة الـ Case Study بالكامل <i class="fa-solid fa-arrow-left-long"></i></span>
+              <i class="fa-solid fa-folder-open" style="color: var(--saffron-deep);"></i>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CASE STUDY MODAL ================= -->
+  <div class="modal-overlay" id="caseStudyModal" role="dialog" aria-modal="true" aria-label="تفاصيل دراسة الحالة">
+    <div class="case-study-modal" id="modalContainer">
+      <button class="modal-close-btn" onclick="closeCaseStudy()" aria-label="إغلاق"><i class="fa-solid fa-xmark"></i></button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <!-- ================= PRODUCTION PIPELINE + REELS ================= -->
+  <section class="reels-section" id="reels">
+    <div class="container">
+      <header class="sec-head reveal">
+        <div class="sec-kicker">
+          <span class="mono">Production Pipeline · من التكليف إلى الإطلاق</span>
+          <span class="rule"></span>
+        </div>
+        <h2 class="sec-title">كيف تُدار الحملة من أول اجتماع حتى التسليم النهائي</h2>
+        <p class="sec-sub">مسار عمل ثابت وضعته خلال 4+ سنوات من إدارة الحسابات: ست مراحل لا يُتخطى فيها الإهمال، ولا يتأخر فيها التسليم.</p>
+      </header>
+
+      <div class="pipeline reveal" id="pipeline">
+        <div class="phase" style="--i: 0">
+          <span class="phase-tick"><i class="fa-solid fa-check"></i></span>
+          <span class="phase-num">01</span>
+          <h4>التكليف</h4>
+          <p>استلام المتطلبات والأهداف من العميل بدقة، وتحويلها لوثيقة عمل واضحة.</p>
+        </div>
+        <div class="phase" style="--i: 1">
+          <span class="phase-tick"><i class="fa-solid fa-check"></i></span>
+          <span class="phase-num">02</span>
+          <h4>التخطيط</h4>
+          <p>صياغة الـBrief الاستراتيجية وبناء خطة الحملة والجدول الزمني للمخرجات.</p>
+        </div>
+        <div class="phase" style="--i: 2">
+          <span class="phase-tick"><i class="fa-solid fa-check"></i></span>
+          <span class="phase-num">03</span>
+          <h4>الإنتاج</h4>
+          <p>توزيع المهام على فرق الإبداع (كتابة · تصميم · فيديو) ومتابعة التنفيذ.</p>
+        </div>
+        <div class="phase" style="--i: 3">
+          <span class="phase-tick"><i class="fa-solid fa-check"></i></span>
+          <span class="phase-num">04</span>
+          <h4>المراجعة</h4>
+          <p>مراجعة الجودة (QC) وتعديل النهائي قبل اعتماد أي مخرج من العميل.</p>
+        </div>
+        <div class="phase" style="--i: 4">
+          <span class="phase-tick"><i class="fa-solid fa-check"></i></span>
+          <span class="phase-num">05</span>
+          <h4>الإطلاق</h4>
+          <p>تنفيذ الحملة ومتابعة الأداء لحظة بلحظة مع الفرق والعميل.</p>
+        </div>
+        <div class="phase" style="--i: 5">
+          <span class="phase-tick"><i class="fa-solid fa-check"></i></span>
+          <span class="phase-num">06</span>
+          <h4>التقييم</h4>
+          <p>إعداد تقارير الأداء واستخلاص الدروس لتحسين الحملات القادمة.</p>
+        </div>
+      </div>
+
+      <header class="sec-head reveal" style="margin-bottom: 40px;">
+        <div class="sec-kicker">
+          <span class="mono">Video &amp; Reels Direction</span>
+          <span class="rule"></span>
+        </div>
+        <h2 class="sec-title" style="font-size: clamp(1.5rem, 2.8vw, 2.2rem);">إخراج وتنفيذ سكريبتات الـReels والحملات</h2>
+        <p class="sec-sub">نماذج من الفيديوهات والـReels التي تم إعداد سكريبتاتها وإدارة إنتاجها مع الفرق الفنية.</p>
+      </header>
+
+      <div class="reels-grid">
+        <div class="reel-card reveal" onclick="openVideoModal('https://assets.mixkit.co/videos/preview/mixkit-fashion-model-in-a-pink-outfit-43510-large.mp4')" tabindex="0"
+          onkeydown="if(event.key==='Enter')openVideoModal('https://assets.mixkit.co/videos/preview/mixkit-fashion-model-in-a-pink-outfit-43510-large.mp4')">
+          <img decoding="async" src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=600&q=80" class="reel-thumbnail" alt="Retail Reel" loading="lazy" />
+          <div class="reel-play"><i class="fa-solid fa-play"></i></div>
+          <div class="reel-info">
+            <span class="reel-cat">SCRIPTWRITING &amp; CREATIVE DIRECTION</span>
+            <h3 class="reel-title">إطلاق تشكيلة موسمية — براند ملابس</h3>
+          </div>
+        </div>
+
+        <div class="reel-card reveal" style="--rd: 0.1s" onclick="openVideoModal('https://assets.mixkit.co/videos/preview/mixkit-barista-preparing-coffee-in-a-cafe-43034-large.mp4')" tabindex="0"
+          onkeydown="if(event.key==='Enter')openVideoModal('https://assets.mixkit.co/videos/preview/mixkit-barista-preparing-coffee-in-a-cafe-43034-large.mp4')">
+          <img decoding="async" src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=600&q=80" class="reel-thumbnail" alt="Cafe Reel" loading="lazy" />
+          <div class="reel-play"><i class="fa-solid fa-play"></i></div>
+          <div class="reel-info">
+            <span class="reel-cat">CAMPAIGN BRIEFING &amp; PRODUCTION OVERSIGHT</span>
+            <h3 class="reel-title">افتتاح كافيه ومقهى مختص</h3>
+          </div>
+        </div>
+
+        <div class="reel-card reveal" style="--rd: 0.2s" onclick="openVideoModal('https://assets.mixkit.co/videos/preview/mixkit-hands-holding-a-smartphone-over-a-table-41158-large.mp4')" tabindex="0"
+          onkeydown="if(event.key==='Enter')openVideoModal('https://assets.mixkit.co/videos/preview/mixkit-hands-holding-a-smartphone-over-a-table-41158-large.mp4')">
+          <img decoding="async" src="https://images.unsplash.com/photo-1556742049-0a67daf4005a?auto=format&fit=crop&w=600&q=80" class="reel-thumbnail" alt="App Reel" loading="lazy" />
+          <div class="reel-play"><i class="fa-solid fa-play"></i></div>
+          <div class="reel-info">
+            <span class="reel-cat">CONCEPT DEVELOPMENT &amp; QC</span>
+            <h3 class="reel-title">حملة ترويجية لتطبيق رقمي</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= VIDEO MODAL ================= -->
+  <div class="video-modal" id="videoModal" role="dialog" aria-modal="true" aria-label="مشغل الفيديو">
+    <div class="video-frame">
+      <button class="video-modal-close" onclick="closeVideoModal()" aria-label="إغلاق الفيديو"><i class="fa-solid fa-xmark"></i></button>
+      <video id="modalVideoPlayer" controls playsinline></video>
+    </div>
+  </div>
+
+  <!-- ================= CAPABILITIES ================= -->
+  <section class="services-section" id="capabilities">
+    <div class="container">
+      <header class="sec-head reveal">
+        <div class="sec-kicker">
+          <span class="mono">Core Competencies · الخدمات والمهارات</span>
+          <span class="rule"></span>
+        </div>
+        <h2 class="sec-title">القدرات والمهارات الأساسية</h2>
+        <p class="sec-sub">كل خدمة لها مخرجات واضحة (Deliverables) قابل للقياس — هذا هو أسلوب العمل الذي ألتزم به مع كل حساب.</p>
+      </header>
+
+      <div class="services-list">
+        <div class="service-row reveal" style="--rd: 0.02s">
+          <div class="svc-head">
+            <i class="fa-solid fa-users-gear svc-icon"></i>
+            <div>
+              <h3 class="svc-title">Account Management</h3>
+              <span class="svc-ar">إدارة الحسابات والعلاقات</span>
+            </div>
+          </div>
+          <ul class="svc-chips">
+            <li>Client Relations &amp; Communication</li>
+            <li>Account Retention &amp; Expansion</li>
+            <li>Stakeholder Alignment</li>
+            <li>Client Feedback Management</li>
+          </ul>
+          <div class="svc-out">
+            <span class="mono">Deliverable</span>
+            <b>Account Growth Plan</b>
+          </div>
+        </div>
+
+        <div class="service-row reveal" style="--rd: 0.04s">
+          <div class="svc-head">
+            <i class="fa-solid fa-bullhorn svc-icon"></i>
+            <div>
+              <h3 class="svc-title">Marketing &amp; Campaigns</h3>
+              <span class="svc-ar">التسويق والحملات</span>
+            </div>
+          </div>
+          <ul class="svc-chips">
+            <li>Campaign Strategy &amp; Planning</li>
+            <li>Brief Development &amp; Execution</li>
+            <li>Integrated Marketing Coordination</li>
+            <li>Social Media Campaign Management</li>
+          </ul>
+          <div class="svc-out">
+            <span class="mono">Deliverable</span>
+            <b>Campaign Kit &amp; Calendar</b>
+          </div>
+        </div>
+
+        <div class="service-row reveal" style="--rd: 0.06s">
+          <div class="svc-head">
+            <i class="fa-solid fa-user-shield svc-icon"></i>
+            <div>
+              <h3 class="svc-title">Team Leadership</h3>
+              <span class="svc-ar">قيادة الفرق</span>
+            </div>
+          </div>
+          <ul class="svc-chips">
+            <li>Creative Team Coordination</li>
+            <li>Workload &amp; Task Delegation</li>
+            <li>Cross-Departmental Management</li>
+            <li>Priority &amp; Sprint Management</li>
+          </ul>
+          <div class="svc-out">
+            <span class="mono">Deliverable</span>
+            <b>Team Production Plan</b>
+          </div>
+        </div>
+
+        <div class="service-row reveal" style="--rd: 0.08s">
+          <div class="svc-head">
+            <i class="fa-solid fa-list-check svc-icon"></i>
+            <div>
+              <h3 class="svc-title">Project Management</h3>
+              <span class="svc-ar">إدارة المشاريع</span>
+            </div>
+          </div>
+          <ul class="svc-chips">
+            <li>Timeline &amp; Deliverables Control</li>
+            <li>Quality Control &amp; Review (QC)</li>
+            <li>Process &amp; Workflow Optimization</li>
+            <li>Resource Allocation</li>
+          </ul>
+          <div class="svc-out">
+            <span class="mono">Deliverable</span>
+            <b>QC Checklist &amp; Schedules</b>
+          </div>
+        </div>
+
+        <div class="service-row reveal" style="--rd: 0.1s">
+          <div class="svc-head">
+            <i class="fa-solid fa-pen-ruler svc-icon"></i>
+            <div>
+              <h3 class="svc-title">Creative (Supporting)</h3>
+              <span class="svc-ar">إبداع داعم</span>
+            </div>
+          </div>
+          <ul class="svc-chips">
+            <li>Script Writing &amp; Visual Hooks</li>
+            <li>Copywriting &amp; Angles Review</li>
+            <li>Art Direction &amp; Brand Guidelines</li>
+            <li>Social Visual Review</li>
+          </ul>
+          <div class="svc-out">
+            <span class="mono">Deliverable</span>
+            <b>Creative Scripts &amp; Concepts</b>
+          </div>
+        </div>
+
+        <div class="service-row reveal" style="--rd: 0.12s">
+          <div class="svc-head">
+            <i class="fa-solid fa-handshake svc-icon"></i>
+            <div>
+              <h3 class="svc-title">Business Acumen</h3>
+              <span class="svc-ar">الفطنة التجارية</span>
+            </div>
+          </div>
+          <ul class="svc-chips">
+            <li>Saudi &amp; GCC Market Familiarity</li>
+            <li>Professional Communication</li>
+            <li>Problem Solving &amp; Crisis Control</li>
+            <li>Performance Oversight</li>
+          </ul>
+          <div class="svc-out">
+            <span class="mono">Deliverable</span>
+            <b>Monthly Performance Reports</b>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= EXPERIENCE ================= -->
+  <section class="experience-section" id="experience">
+    <div class="container">
+      <header class="sec-head reveal">
+        <div class="sec-kicker">
+          <span class="mono">Professional Journey · المسيرة المهنية</span>
+          <span class="rule"></span>
+        </div>
+        <h2 class="sec-title">الخبرة العملية والتنفيذية</h2>
+        <p class="sec-sub">مسيرة مهنية ممتدة في وكالات التسويق والدعاية وإدارة الحسابات والفرق.</p>
+      </header>
+
+      <div class="exp-row reveal">
+        <div class="exp-period">
+          2025 — 2026
+          <em>CURRENT ROLE</em>
+        </div>
+        <div class="exp-line"></div>
+        <div class="exp-main">
+          <h3 class="exp-company">Hub Marketing Agency</h3>
+          <span class="exp-role">Account Manager &amp; Team Leader</span>
+          <ul class="exp-duties">
+            <li>قيادة وتنسيق فريق التسويق والإبداع لإدارة حسابات عدة براندات في قطاعات التجارة والتجزئة والخدمات.</li>
+            <li>إعداد استراتيجيات التواصل والـBriefs التنفيذية وتحديد خطط العمل السنوية والموسمية.</li>
+            <li>التواصل المباشر مع العملاء وعقد الاجتماعات الاستراتيجية لمتابعة الأهداف ومراجعة الأداء.</li>
+            <li>مراقبة جودة التسليمات (Quality Control) وضمان الالتزام الصارم بالجدول الزمني المحدد.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="exp-row reveal">
+        <div class="exp-period">
+          2023 — 2025
+          <em>PREVIOUS ROLE</em>
+        </div>
+        <div class="exp-line"></div>
+        <div class="exp-main">
+          <h3 class="exp-company">Rosetta Marketing</h3>
+          <span class="exp-role">Account Manager</span>
+          <ul class="exp-duties">
+            <li>إدارة الاتصالات اليومية مع كبار العملاء واستلام التكليفات وتحويلها إلى بريفات عمل واضحة للفرق الداخلية.</li>
+            <li>التنسيق بين أقسام كتابة المحتوى، التصميم، وإنتاج الفيديوهات لضمان انسيابية العمل بدون معوقات.</li>
+            <li>متابعة ميزانيات الحملات التسويقية وجداول النشر وتعديلات العملاء لضمان أقصى درجات الرضا والتجديد.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ABOUT ================= -->
+  <section class="about-section" id="about">
+    <div class="container about-grid">
+      <div class="identity-panel reveal">
+        <div class="monogram">د</div>
+        <h3 class="ip-name">دنيا جمال</h3>
+        <span class="ip-latin">DONIA GAMAL</span>
+        <ul class="ip-facts">
+          <li><span class="mono">Location</span> القاهرة · مصر <i class="fa-solid fa-location-dot"></i></li>
+          <li><span class="mono">Target</span> السعودية · الخليج <i class="fa-solid fa-bullseye"></i></li>
+          <li><span class="mono">Focus</span> Accounts · Campaigns <i class="fa-solid fa-briefcase"></i></li>
+        </ul>
+      </div>
+
+      <div class="reveal" style="--rd: 0.1s">
+        <div class="sec-kicker" style="margin-bottom: 20px;">
+          <span class="mono">About Donia Gamal · عن دنيا</span>
+          <span class="rule"></span>
+        </div>
+        <h2 class="sec-title">خبرة تسويقية قائمة على النظام والتنفيذ المحترف</h2>
+        <p class="about-bio">
+          أمتلك أكثر من <strong>4 سنوات من الخبرة العمليّة</strong> في مجال إدارة الحسابات وتسويق البراندات داخل وكالات
+          التسويق والإعلانات. أرتكز في عملي على تبسيط العمليات المعقدة، بناء جسور ثقة متينة مع العملاء، وقيادة فرق العمل
+          الإبداعية نحو تحقيق أهداف البراند بكفاءة عالية.
+        </p>
+
+        <div class="about-bullets">
+          <div class="about-bullet-item"><i class="fa-solid fa-check-circle"></i> خبرة واسعة في السوق المصري والسعودي</div>
+          <div class="about-bullet-item"><i class="fa-solid fa-check-circle"></i> قدرة عالية على إدارة وتوجيه الفرق</div>
+          <div class="about-bullet-item"><i class="fa-solid fa-check-circle"></i> الالتزام الصارم بالـBriefs والمواعيد</div>
+          <div class="about-bullet-item"><i class="fa-solid fa-check-circle"></i> المرونة واحتواء متطلبات العملاء</div>
+        </div>
+
+        <a href="#contact" class="btn btn-dark">تواصل معي لبدء العمل سوياً <i class="fa-solid fa-arrow-left-long"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= TESTIMONIALS ================= -->
+  <section class="testimonials-section" id="testimonials">
+    <div class="container">
+      <header class="sec-head reveal">
+        <div class="sec-kicker">
+          <span class="mono">Client &amp; Partner Feedback</span>
+          <span class="rule"></span>
+        </div>
+        <h2 class="sec-title">شهادات العملاء والشركاء</h2>
+        <p class="sec-sub">انطباعات القيادات والعملاء حول دقة التنفيذ والتواصل الاحترافي أثناء إدارة المشاريع.</p>
+      </header>
+
+      <div class="testimonials-grid">
+        <div class="testimonial-card reveal">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-quote">"تعاملنا مع دنيا في إدارة حساب البراند بالكامل، وكانت مثالاً في الدقة والالتزام بالمواعيد، مع فهم عميق لاحتياجاتنا الاستراتيجية."</p>
+          <div class="testimonial-client">
+            <div class="client-avatar">أ</div>
+            <div>
+              <div class="client-name">أحمد عبد الله</div>
+              <div class="client-role">مؤسس براند ملابس تجاري</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card reveal" style="--rd: 0.1s">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-quote">"قدرة ممتازة على ربط متطلباتنا كإدارة مع الفريق الإبداعي داخل الوكالة، وتسليم الحملة بدون أي أخطاء أو تأخير."</p>
+          <div class="testimonial-client">
+            <div class="client-avatar">س</div>
+            <div>
+              <div class="client-name">سارة محمود</div>
+              <div class="client-role">مديرة تسويق مجموعة ضيافة</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card reveal" style="--rd: 0.2s">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-quote">"من أفضل من أدار حسابات شركتنا الرقمية، اهتمام دقيق بالتفاصيل والـBriefs ومتابعة دورية مستمرة."</p>
+          <div class="testimonial-client">
+            <div class="client-avatar">م</div>
+            <div>
+              <div class="client-name">محمد علي</div>
+              <div class="client-role">رائد أعمال ومؤسس منصة</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT ================= -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <header class="sec-head reveal">
+        <div class="sec-kicker">
+          <span class="mono">Contact · بيانات التواصل</span>
+          <span class="rule"></span>
+        </div>
+        <h2 class="sec-title">افتحوا ملفًا جديدًا معًا</h2>
+        <p class="sec-sub">جاهزة للانضمام لفريقكم كـ Marketing Manager أو Account Manager في المملكة العربية السعودية وإدارة أهدافكم التسويقية بنجاح.</p>
+      </header>
+
+      <div class="contact-grid">
+        <div class="reveal">
+          <h3 class="contact-info-title">Let's build something impactful.</h3>
+          <p class="contact-info-desc">
+            جاهزة للانضمام لفريقكم كـ <strong>Marketing Manager</strong> أو <strong>Account Manager</strong> في المملكة
+            العربية السعودية وإدارة أهدافكم التسويقية بنجاح.
+          </p>
+
+          <div class="contact-direct-links">
+            <a class="contact-direct-item" href="mailto:gdonia539@gmail.com">
+              <i class="fa-solid fa-envelope"></i>
+              <div>
+                <span class="mono">Email · البريد</span>
+                <span dir="ltr" style="display: block; margin-top: 3px;">gdonia539@gmail.com</span>
+              </div>
+            </a>
+            <a class="contact-direct-item" href="https://wa.me/201104760993" target="_blank" rel="noopener">
+              <i class="fa-brands fa-whatsapp"></i>
+              <div>
+                <span class="mono">WhatsApp · واتساب</span>
+                <span dir="ltr" style="display: block; margin-top: 3px;">+20 1104760993</span>
+              </div>
+            </a>
+            <div class="contact-direct-item">
+              <i class="fa-solid fa-location-dot"></i>
+              <div>
+                <span class="mono">Location · الموقع</span>
+                <span style="display: block; margin-top: 3px;">القاهرة، مصر — جاهزة للانتقال للسعودية</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <form class="contact-form reveal" id="contactForm" style="--rd: 0.1s" novalidate>
+          <div class="form-head">
+            <span class="mono">New Brief · تكليف جديد</span>
+            <h3>أخبرني عن الفرصة أو التكليف</h3>
+          </div>
+
+          <div class="field">
+            <label for="cf-name">الاسم الكريم</label>
+            <input type="text" class="form-input" id="cf-name" name="name" placeholder="مثال: أحمد محمد" required />
+          </div>
+
+          <div class="field">
+            <label for="cf-email">البريد الإلكتروني</label>
+            <input type="email" class="form-input" id="cf-email" name="email" placeholder="name@company.com" required />
+          </div>
+
+          <div class="field">
+            <label for="cf-company">اسم الشركة / الجهة</label>
+            <input type="text" class="form-input" id="cf-company" name="company" placeholder="اسم جهة العمل (اختياري)" />
+          </div>
+
+          <div class="field">
+            <label for="cf-msg">تفاصيل الفرصة / التكليف</label>
+            <textarea class="form-textarea" id="cf-msg" name="message" rows="4" placeholder="صف الدور أو المشروع الذي تبحثون عنه..." required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-saffron">إرسال الرسالة <i class="fa-solid fa-arrow-left-long"></i></button>
+
+          <div class="form-success" id="formSuccess" role="status">
+            <i class="fa-solid fa-circle-check"></i>
+            <span>شكراً لتواصلك! تم استلام رسالتك وسيتم الرد فوراً.</span>
+          </div>
+
+          <p class="form-note">الرد خلال 24 ساعة عمل كحد أقصى — جدول جاهز للاستلام</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="container footer-flex">
+      <span class="footer-brand" style="display: inline-flex; align-items: center;">
+        <span class="footer-seal" aria-hidden="true">✓<small>QC</small></span>
+        Donia<span>.</span>Gamal — Account Manager &amp; Marketing Professional
+      </span>
+      <span class="footer-meta">© 2026 جميع الحقوق محفوظة — دنيا جمال · CAIRO — KSA READY</span>
+    </div>
+  </footer>
+
+  <!-- ================= JAVASCRIPT ================= -->
+  <script>
+    (function () {
+      'use strict';
+
+      /* ---------- Navbar scroll state ---------- */
+      const navbar = document.getElementById('navbar');
+      const onScroll = () => {
+        navbar.classList.toggle('scrolled', window.scrollY > 40);
+      };
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+
+      /* ---------- Mobile nav toggle ---------- */
+      const navToggle = document.getElementById('navToggle');
+      const navLinks = document.getElementById('navLinks');
+
+      navToggle.addEventListener('click', () => {
+        const isOpen = navLinks.classList.toggle('open');
+        navToggle.classList.toggle('open', isOpen);
+        navToggle.setAttribute('aria-expanded', String(isOpen));
+      });
+
+      navLinks.querySelectorAll('a').forEach((link) => {
+        link.addEventListener('click', () => {
+          navLinks.classList.remove('open');
+          navToggle.classList.remove('open');
+          navToggle.setAttribute('aria-expanded', 'false');
+        });
+      });
+
+      /* ---------- Scroll reveal ---------- */
+      const revealObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('in-view');
+              revealObserver.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.12, rootMargin: '0px 0px -8% 0px' }
+      );
+      document.querySelectorAll('.reveal').forEach((el) => revealObserver.observe(el));
+
+      /* ---------- Pipeline self-fill ---------- */
+      const pipeline = document.getElementById('pipeline');
+      if (pipeline) {
+        const pipelineObserver = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                pipeline.classList.add('run');
+                pipelineObserver.unobserve(pipeline);
+              }
+            });
+          },
+          { threshold: 0.35 }
+        );
+        pipelineObserver.observe(pipeline);
+      }
+
+      /* ---------- Scrollspy ---------- */
+      const spyLinks = Array.from(document.querySelectorAll('.nav-links a'));
+      const spySections = document.querySelectorAll('section[id]');
+      const spyObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              spyLinks.forEach((a) => {
+                a.classList.toggle('active', a.getAttribute('href') === '#' + entry.target.id);
+              });
+            }
+          });
+        },
+        { rootMargin: '-45% 0px -50% 0px' }
+      );
+      spySections.forEach((section) => spyObserver.observe(section));
+
+      /* ---------- Case studies data ---------- */
+      const caseStudiesData = {
+        brand1: {
+          tag: "Saudi Retail & Lifestyle",
+          title: "براند تجزئة ولايف ستايل سعودي",
+          subtitle: "إدارة الحساب الشاملة وتنسيق الحملات التسويقية الموسمية بالسعودية",
+          agency: "Hub Marketing Agency",
+          role: "Account Manager & Team Leader",
+          timeline: "2025 — 2026",
+          overview: "إدارة التواجد التسويقي لبراند تجزئة سعودي في قطاع الملابس واللايف ستايل عبر المنصات الرقمية، وبناء خطة حملات موسيمية استهدفت السوق السعودي بالكامل.",
+          rolesList: [
+            "Client Communication & Status Meetings",
+            "Seasonal Campaign Briefing",
+            "Creative & Design Team Delegation",
+            "Timeline & Deliverables Management",
+            "Content Quality Assurance (QC)",
+            "Client Feedback Approval Handling"
+          ],
+          images: [
+            "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=800&q=80",
+            "https://images.unsplash.com/photo-1472851294608-062f824d29cc?auto=format&fit=crop&w=800&q=80"
+          ],
+          impact: "تم تسليم 12 حملة تسويقية موسمية في المواعيد المحددة وبنسبة رضا عميل بلغت 100% مع زيادة انسيابية العمل بين فريق الإبداع والعميل وتفادي التعديلات المتكررة."
+        },
+        brand2: {
+          tag: "F&B & Hospitality",
+          title: "مجموعة مطاعم وضيافة راقية",
+          subtitle: "إدارة إطلاق الفروع الجديدة والتسويق الرقمي للوجبات والفعاليات",
+          agency: "Rosetta Marketing",
+          role: "Account Manager",
+          timeline: "2024 — 2025",
+          overview: "التنسيق الكامل لإطلاق الفروع الجديدة وإدارة صناعة المحتوى المرئي والـReels لبراند مطاعم وفروع ضيافة في منطقة الخليج.",
+          rolesList: [
+            "Executive Client Briefing",
+            "Production Team Coordination",
+            "Video & Reel Script Review",
+            "Social Media Calendar Control",
+            "On-site Shoot Logistics Support",
+            "Final Deliverables Quality Review"
+          ],
+          images: [
+            "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80",
+            "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80"
+          ],
+          impact: "تنسيق إطلاق 3 فروع جديدة بدون أي تأخير في الخطة الزمنية للإعلانات، وتعزيز التفاعل مع الفيديو عبر إخراج سكريبتات مركزة وقوية."
+        },
+        brand3: {
+          tag: "E-Commerce Platform",
+          title: "منصة تجارة إلكترونية إقليمية",
+          subtitle: "إدارة حملات الأداء الرقمي والتسويق المباشر للمنتجات",
+          agency: "Hub Marketing Agency",
+          role: "Account Manager & Team Leader",
+          timeline: "2025",
+          overview: "قيادة التنسيق اليومي بين قسم التسويق الرقمي والمصممين وكتاب المحتوى لإدارة الحملات الترويجية والعروض لـ E-Commerce Platform.",
+          rolesList: [
+            "Ad Creatives Briefing",
+            "Sprint & Task Allocation",
+            "Copywriting & Angles Alignment",
+            "Account Growth Operations",
+            "Client Performance Reporting",
+            "Asset Quality Assurance"
+          ],
+          images: [
+            "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80",
+            "https://images.unsplash.com/photo-1522542550221-31fd19575a2d?auto=format&fit=crop&w=800&q=80"
+          ],
+          impact: "رفع سرعة تسليم التصاميم والإعلانات بنسبة 35% مع الالتزام الكامل بدليل العلامة التجارية واستراتيجية التسويق."
+        },
+        brand4: {
+          tag: "Corporate & Real Estate",
+          title: "شركة تطوير عقاري واستثمار",
+          subtitle: "إدارة الهوية التسويقية للمشاريع العقارية وتواصل الإدارة العليا",
+          agency: "Rosetta Marketing",
+          role: "Account Manager",
+          timeline: "2023 — 2024",
+          overview: "إدارة التواصل التنفيذي للمشاريع العقارية، إعداد ملفات المشاريع والعروض التقديمية وتنسيق الحملات الإعلامية الخاصة بالإطلاق.",
+          rolesList: [
+            "High-level Stakeholder Communication",
+            "Corporate Brief Preparation",
+            "Brand Positioning Control",
+            "Media & Agency Alignment",
+            "Annual Roadmap Scheduling",
+            "Executive Review & Approvals"
+          ],
+          images: [
+            "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80",
+            "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=800&q=80"
+          ],
+          impact: "توطيد العلاقة مع العميل مما أدى لتجديد عقد الوكالة لعام إضافي وتوسيع نطاق الخدمات ليشمل قطاعات عقارية جديدة."
+        }
+      };
+
+      /* ---------- Modal focus management ---------- */
+      let lastFocused = null;
+
+      function trapFocus(container, event) {
+        const focusables = container.querySelectorAll(
+          'a[href], button:not([disabled]), input, textarea, select, [tabindex]:not([tabindex="-1"])'
+        );
+        if (!focusables.length) return;
+        const first = focusables[0];
+        const last = focusables[focusables.length - 1];
+        if (event.shiftKey && document.activeElement === first) {
+          event.preventDefault();
+          last.focus();
+        } else if (!event.shiftKey && document.activeElement === last) {
+          event.preventDefault();
+          first.focus();
+        }
+      }
+
+      function openModal(overlayId, focusTarget) {
+        lastFocused = document.activeElement;
+        document.getElementById(overlayId).classList.add('active');
+        document.body.style.overflow = 'hidden';
+        const target = focusTarget || document.querySelector('#' + overlayId + ' button');
+        if (target) target.focus();
+      }
+
+      function closeModal(overlayId) {
+        document.getElementById(overlayId).classList.remove('active');
+        document.body.style.overflow = '';
+        if (lastFocused) {
+          lastFocused.focus();
+          lastFocused = null;
+        }
+      }
+
+      window.openCaseStudy = function (brandKey) {
+        const data = caseStudiesData[brandKey];
+        if (!data) return;
+
+        const html = `
+          <div class="cs-header">
+            <span class="cs-tag">CASE STUDY — ${data.tag}</span>
+            <h2 class="cs-title">${data.title}</h2>
+            <p class="cs-sub">${data.subtitle}</p>
+          </div>
+
+          <div class="cs-meta">
+            <div class="cs-meta-item">
+              <span class="mono">Agency · الوكالة</span>
+              <span class="cs-meta-val">${data.agency}</span>
+            </div>
+            <div class="cs-meta-item">
+              <span class="mono">Role · الدور</span>
+              <span class="cs-meta-val">${data.role}</span>
+            </div>
+            <div class="cs-meta-item">
+              <span class="mono">Period · الفترة</span>
+              <span class="cs-meta-val">${data.timeline}</span>
+            </div>
+          </div>
+
+          <div class="cs-body">
+            <div>
+              <h3 class="cs-block-title"><i class="fa-solid fa-circle-info"></i> نبذة عن المشروع</h3>
+              <p class="cs-overview">${data.overview}</p>
+            </div>
+
+            <div>
+              <h3 class="cs-block-title"><i class="fa-solid fa-user-check"></i> دور دنيا جمال في المشروع</h3>
+              <ul class="cs-rols">
+                ${data.rolesList.map((item) => `<li><i class="fa-solid fa-check-double"></i> ${item}</li>`).join('')}
+              </ul>
+            </div>
+
+            <div>
+              <h3 class="cs-block-title"><i class="fa-solid fa-images"></i> المواد والمخرجات الإبداعية</h3>
+              <div class="cs-gallery">
+                ${data.images
+                  .map(
+                    (img) => `
+                  <div class="cs-gallery-item full-width">
+                    <img src="${img}" alt="Campaign Visual" loading="lazy" />
+                  </div>`
+                  )
+                  .join('')}
+              </div>
+            </div>
+
+            <div>
+              <h3 class="cs-block-title"><i class="fa-solid fa-chart-line"></i> الأثر والنتائج</h3>
+              <div class="cs-impact">
+                <span class="mono">Impact &amp; Outcome</span>
+                <p>${data.impact}</p>
+              </div>
+            </div>
+          </div>
+        `;
+
+        document.getElementById('modalContent').innerHTML = html;
+        openModal('caseStudyModal');
+      };
+
+      window.closeCaseStudy = function () {
+        closeModal('caseStudyModal');
+      };
+
+      document.getElementById('caseStudyModal').addEventListener('click', (e) => {
+        if (e.target.id === 'caseStudyModal') {
+          closeCaseStudy();
+        }
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          closeCaseStudy();
+          closeVideoModal();
+        }
+        if (e.key === 'Tab') {
+          if (document.getElementById('caseStudyModal').classList.contains('active')) {
+            trapFocus(document.getElementById('caseStudyModal'), e);
+          } else if (document.getElementById('videoModal').classList.contains('active')) {
+            trapFocus(document.getElementById('videoModal'), e);
+          }
+        }
+      });
+
+      /* ---------- Video modal ---------- */
+      window.openVideoModal = function (videoSrc) {
+        const modal = document.getElementById('videoModal');
+        const player = document.getElementById('modalVideoPlayer');
+        player.src = videoSrc;
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+        lastFocused = document.activeElement;
+        player.play();
+        const closeBtn = document.querySelector('.video-modal-close');
+        if (closeBtn) closeBtn.focus();
+      };
+
+      window.closeVideoModal = function () {
+        const modal = document.getElementById('videoModal');
+        const player = document.getElementById('modalVideoPlayer');
+        player.pause();
+        player.src = '';
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+        if (lastFocused) {
+          lastFocused.focus();
+          lastFocused = null;
+        }
+      };
+
+      document.getElementById('videoModal').addEventListener('click', (e) => {
+        if (e.target.id === 'videoModal') {
+          closeVideoModal();
+        }
+      });
+
+      /* ---------- Contact form ---------- */
+      const contactForm = document.getElementById('contactForm');
+      if (contactForm) {
+        contactForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+
+          const name = contactForm.querySelector('#cf-name').value.trim();
+          const email = contactForm.querySelector('#cf-email').value.trim();
+          const message = contactForm.querySelector('#cf-msg').value.trim();
+
+          if (!name || !email || !message) {
+            contactForm.querySelector('.form-input, .form-textarea[required]');
+            const firstEmpty = Array.from(contactForm.querySelectorAll('input, textarea')).find(
+              (field) => !field.value.trim()
+            );
+            if (firstEmpty) firstEmpty.focus();
+            return;
+          }
+
+          const isEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+          if (!isEmail) {
+            contactForm.querySelector('#cf-email').focus();
+            return;
+          }
+
+          const success = document.getElementById('formSuccess');
+          success.classList.add('show');
+
+          contactForm.querySelectorAll('input, textarea').forEach((field) => {
+            field.value = '';
+          });
+
+          success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+          setTimeout(() => {
+            success.classList.remove('show');
+          }, 9000);
+        });
+      }
+    })();
+  </script>
+</body>
+
+</html>
